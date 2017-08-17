@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy Shop</title>
-    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
 
@@ -11,40 +12,55 @@
     <header class="main-header container">
       <nav class="navigation">
         <a class="main-logo" href="#" title="Магазин &laquo;Глейси&raquo;">
-          <img src="#" width="150" height="60" alt="Логотип магазина &laquo;Глейси&raquo;">
+          <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина &laquo;Глейси&raquo;">
         </a>
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a class="navigation__link" href="#">Каталог</a>
-            <ul class="menu__list">
-              <li><a class="menu__link" href="#">Новинки</a></li>
-              <li><a class="menu__link"href="catalog.html">Сливочное</a></li>
-              <li><a class="menu__link"href="#">Щербеты</a></li>
-              <li><a class="menu__link"href="#">Фруктовый лед</a></li>
-              <li><a class="menu__link"href="#">Мелорин</a></li>
+            <button class="navigation__link" type="button">Каталог</button>
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Новинки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="catalog.html">Сливочное</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Щербеты</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Фруктовый лед</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Мелорин</a>
+              </li>
             </ul>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">Доставка и оплата</a></li>
+            <a class="navigation__link" href="#" title="Доставка и оплата">Доставка и оплата</a>
+          </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">О Компании</a></li>
+            <a class="navigation__link" href="#" title="О Компании">О Компании</a></li>
         </ul>
       </nav>
 
       <div class="user-block">
         <div class="user-block__element">
-          <a class="user-block__link user-block__link--search" href="#"></a>
+          <button class="user-block__link user-block__link--search" type="button"></button>
           <div class="user-block__search">
-            <input type="text" name="search" placehoder="Что ищем?">
+            <form action="#" method="get">
+              <input type="text" name="search" placeholder="Что ищем?">
+              <input class="visually-hidden" type="submit" name="button" value="Отправить">
+            </form>
           </div>
         </div>
+
         <div class="user-block__element">
-          <a class="user-block__link user-block__link--entry" href="#">Вход</a>
+          <button class="user-block__link user-block__link--entry" type="button">Вход</button>
           <div class="user-block__entry">
             <form action="#" method="post">
               <input type="email" name="email" value="Электронная почта">
-              <input type="password" name="password" placeholder="Пароль">
-              <input class="entry-btn" type="submit" name="submit" placeholder="
+              <input type="password" name="password" value="Пароль">
+              <input class="entry-btn" type="submit" name="submit" value="
               Войти">
               <a class="password-link" href="#">Забыли пароль?</a>
               <a class="signin-link" href="#">Новая регистрация</a>
@@ -52,49 +68,68 @@
           </div>
         </div>
         <div class="user-block__element">
-          <a class="user-block__link user-block__link--empty-basket" href="#">Пусто</a>
+          <button class="user-block__link user-block__link--empty-basket" type="button">Пусто</button>
+          <div class="basket">
+            <table class="basket__table">
+              <tr>
+                <td><button class="basket__close-btn" type="button"></button></td>
+                <td><a href="#"><img class="basket__img" src="#" alt="Пломбир с апельсиновым джемом"></a></td>
+                <td><a href="#">Пломбир с апельсиновым джемом</a></td>
+                <td>1,5 кг х <span>200 руб.</span></td>
+                <td>300 руб.</td>
+              </tr>
+              <tr>
+                <td><button class="basket__close-btn" type="button"></button></td>
+                <td><a href="#"><img class="basket__img" src="#" alt="Клубничный пломбир с присыпкой  из белого шоколада"></a></td>
+                <td><a href="#">Клубничный пломбир с присыпкой  из белого шоколада</a></td>
+                <td>1,5 кг х <span>300 руб.</span></td>
+                <td>450 руб.</td>
+              </tr>
+            </table>
+            <span class="basket__total">Итого: 750 руб.</span>
+            <a class="basket__link" href="#">Оформить заказ</a>
+          </div>
         </div>
       </div>
 
       <div class="main-timetable">
         <p class="main-timetable__text">С 10 до 20, ежедневно</p>
-        <a class="main-timetable__tel"
-         href="tel:+7(812) 450-25-25" title="наш телефон">+7(812) 450-25-25</a>
+        <a class="main-timetable__tel" href="tel:+78124502525" title="наш телефон">+7(812) 450-25-25</a>
       </div>
     </header>
 
 
     <main class="container">
-      <section class="sliders">
-        <input type="radio" name="toggle" id="radio__1" checked>
-        <input type="radio" name="toggle" id="radio__2">
-        <input type="radio" name="toggle" id="radio__3">
+      <section class="slider">
+        <input type="radio" name="toggle" id="radio-1" checked>
+        <input type="radio" name="toggle" id="radio-2">
+        <input type="radio" name="toggle" id="radio-3">
 
-      <div class="slider__1">
-        <h2 class="slider__title">Крембрюле и пломбир с малиновым джемом</h2>
-        <a class="slider__btn" href="#">Давайте оба</a>
-      </div>
-      <div class="slider__2">
-        <h2 class="slider__title">Шоколадный пломбир и лимонный сорбет</h2>
-        <a class="slider__btn" href="#">Давайте оба</a>
-      </div>
-      <div class="slider__3">
-        <h2 class="slider__title">Пломбир с помадкой и клубничный щербет</h2>
-        <a class="slider__btn" href="#">Давайте оба</a>
-      </div>
+        <div class="slide slide--1">
+          <h2 class="slide__title">Крембрюле и пломбир с малиновым джемом</h2>
+          <a class="slide__btn" href="#">Давайте оба</a>
+        </div>
+        <div class="slide slide--1">
+          <h2 class="slide__title">Шоколадный пломбир и лимонный сорбет</h2>
+          <a class="slide__btn" href="#">Давайте оба</a>
+        </div>
+        <div class="slide slide--1">
+          <h2 class="slide__title">Пломбир с помадкой и клубничный щербет</h2>
+          <a class="slide__btn" href="#">Давайте оба</a>
+        </div>
 
-      <div class="slider-control">
-        <label for="radio__1"></label>
-        <label for="radio__2"></label>
-        <label for="radio__3"></label>
-      </div>
+        <div class="slider-control">
+          <label for="radio-1"></label>
+          <label for="radio-2"></label>
+          <label for="radio-3"></label>
+        </div>
       </section>
 
       <div class="banners">
         <section class="banner banner--raspberry">
           <h2 class="banner__title">Малинка даром!</h2>
           <p class="banner__text">При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a  class="banner__btn" href="#">Хочу варенье!</a>
+          <a class="banner__btn" href="#">Хочу варенье!</a>
         </section>
         <section class="banner banner--chocolate">
           <h2 class="banner__title">Шоколадки даром!</h2>
@@ -106,44 +141,49 @@
       <div class="goods">
         <div class="goods-wrap">
           <section class="good">
+            <h2 class="visually-hidden">Хит продаж</h2>
+            <div class="good-hit">хит</div>
             <img src="#" width="10" height="20" alt="Ice-cream">
             <span class="good__price">310₽/кг</span>
             <a class="good__link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            <a  class="good__btn" href="#">Быстрый просмотр</a>
+            <a class="good__btn" href="#">Быстрый просмотр</a>
           </section>
           <section class="good">
+            <h2 class="visually-hidden">Хит продаж</h2>
+            <div class="good-hit">хит</div>
             <img src="#" width="10" height="20" alt="Ice-cream">
             <span class="good__price">380₽/кг</span>
             <a href="#">Сливочно-кофейное с кусочками шоколада</a>
-            <a  class="good__btn" href="#">Быстрый просмотр</a>
+            <a class="good__btn" href="#">Быстрый просмотр</a>
           </section>
           <section class="good">
+            <h2 class="visually-hidden">Хит продаж</h2>
+            <div class="good-hit">хит</div>
             <img src="#" width="10" height="20" alt="Ice-cream">
             <span class="good__price">355₽/кг</span>
             <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-            <a  class="good__btn" href="#">Быстрый просмотр</a>
+            <a class="good__btn" href="#">Быстрый просмотр</a>
           </section>
           <section class="good">
+            <h2 class="visually-hidden">Хит продаж</h2>
+            <div class="good-hit">хит</div>
             <img src="#" width="10" height="20" alt="Ice-cream">
             <span class="price">415₽/кг</span>
             <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-            <a  class="good__btn" href="#">Быстрый просмотр</a>
+            <a class="good__btn" href="#">Быстрый просмотр</a>
           </section>
         </div>
       </div>
 
       <section class="shop-description">
-        <h1 class="shop-description__title">Магазин Глейси  — это онлайн и оффлайн магазин по продаже мороженного собственного производства на развес
-        </h1>
-        <p class="shop-description__text">Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-        </p>
-        <p class="shop-description__text">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-        </p>
-        <p class="shop-description__text">Закупка ингридиентов  производиться только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-        </p>
-        <p class="shop-description__text">Доставка нашего мороженного до заказчиков
-        осуществялется в специальном термопаке, которая не дает мороженному растаять в пути и позволяет ему сохранить свой превосходный вкус.
-        </p>
+        <h2 class="shop-description__title">Магазин Глейси  — это онлайн и оффлайн магазин по  продаже мороженного собственного производства на развес</h2>
+        <ul class="shop-description__list">
+          <li class="shop-description__text shop-description__text--ice-cream">Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+          <li class="shop-description__text shop-description__text--cow">Закупка ингридиентов  производиться только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+          <li class="shop-description__text shop-description__text--leaf">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+          <li class="shop-description__text shop-description__text--temperature">Доставка нашего мороженного до заказчиков
+          осуществялется в специальном термопаке, которая не дает мороженному растаять в пути и позволяет ему сохранить свой превосходный вкус.</li>
+        </ul>
       </section>
 
       <div class="news">
@@ -154,34 +194,26 @@
           </h3>
         </article>
         <article class="newsletter">
-          <h2 class="title-hidden">Подпишитесь</h2>
+          <h2 class="visually-hidden">Подпишитесь</h2>
           <p class="newsletter__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
           <form class="newsletter__form" action="#" method="post">
             <input class="newsletter__email" type="email" name="email" placeholder="Электронная почта">
-            <input class="newsletter__btn" type="submit" name="button"value="Отправить">
+            <input class="newsletter__btn" type="submit" name="button" value="Отправить">
           </form>
         </article>
       </div>
 
       <div class="contacts">
-      <section class="address">
-        <h2 class="title-hidden">Карта</h2>
-        <p class="address__text">Адрес главного офиса и офлайн магазина:</p>
-        <p class="address__street">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-        <p class="address__text">Для заказов по телефону:</p>
-        <p class="address__phone">8 812 450-25-25</p>
-        <p class="address__text">(с 10 до 20 ежедневно)</p>
-        <a class="address__btn" href="#">Форма обратной связи</a>
-        <section class="feedback">
-          <h3 class="feedback-title">Мы обязательно вам ответим!</h3>
-          <form action="#" class="feedback-form">
-            <input class="feedback__name" type="text" name="text" placeholder="Как вас зовут?">
-            <input class="feedback__email" type="email" name="email" placeholder="Ваша почта для ответа?">
-            <input class="feedback__text" type="text" name="text" placeholder="Напишите что-нибудь...">
-            <input class="feedback__submit" type="submit" name="submit" value="Отправить">
-          </form>
+        <section class="address">
+          <h2 class="visually-hidden">Карта</h2>
+          <p class="address__text">Адрес главного офиса и офлайн магазина:</p>
+          <p class="address__street">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+          <p class="address__text">Для заказов по телефону:</p>
+          <p class="address__phone">8 812 450-25-25</p>
+          <p class="address__text">(с 10 до 20 ежедневно)</p>
+          <a class="address__btn" href="#">Форма обратной связи</a>
         </section>
-      </section>
+      </div>
     </main>
 
 
@@ -203,26 +235,39 @@
         </ul>
 
         <ul class="footer-info">
-          <li class="footer-info__item heart">
+          <li class="footer-info__item footer-info__item--heart">
             <a class="footer-info__link" href="#">Для поставщиков</a>
           </li>
           <li class="footer-info__item">
-            <a class="footer-info__link"href="#" >Наши документы</a>
+            <a class="footer-info__link" href="#">Наши документы</a>
           </li>
           <li class="footer-info__item">
-            <a class="footer-info__link" href="#" >О производстве</a>
+            <a class="footer-info__link" href="#">О производстве</a>
           </li>
           <li class="footer-info__item">
             <a class="footer-info__link" href="#">Экологические стандарты</a>
           </li>
         </ul>
+
         <address class="footer-author">
           <img src="#" width="100" height="40" alt="Логин HTML Academy">
           <p class="footer-author__text">Сделано в
-          <a class="footer-author__link" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
+            <a class="footer-author__link" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
           © 2016</p>
         </address>
       </div>
     </footer>
+
+    <section class="feedback">
+      <h3 class="feedback-title">Мы обязательно вам ответим!</h3>
+      <form action="#" class="feedback-form">
+        <input class="feedback__name" type="text" name="text" placeholder="Как вас зовут?">
+        <input class="feedback__email" type="email" name="email" placeholder="Ваша почта для ответа?">
+        <input class="feedback__text" type="text" name="text" placeholder="Напишите что-нибудь...">
+        <input class="feedback__submit" type="submit" name="submit" value="Отправить">
+      </form>
+    </section>
+
+    <script src="js/javascript.js"></script>
   </body>
 </html>

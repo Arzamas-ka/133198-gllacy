@@ -1,0 +1,31 @@
+body {
+  width: 100%;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.375;
+  color: #fff;
+
+  background-color: #98ada2;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* класс для сокрытия текста */
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  padding: 0;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
