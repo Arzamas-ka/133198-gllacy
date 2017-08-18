@@ -9,7 +9,7 @@
 
 
   <body>
-    <header class="main-header container">
+    <header class="main-header container clearfix">
       <nav class="navigation">
         <a class="main-logo" href="#" title="Магазин &laquo;Глейси&raquo;">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина &laquo;Глейси&raquo;">
@@ -17,7 +17,7 @@
         <ul class="navigation__list">
           <li class="navigation__item">
             <button class="navigation__link" type="button">Каталог</button>
-            <ul class="menu">
+            <!-- <ul class="menu">
               <li class="menu__item">
                 <a class="menu__link" href="#">Новинки</a>
               </li>
@@ -33,7 +33,7 @@
               <li class="menu__item">
                 <a class="menu__link" href="#">Мелорин</a>
               </li>
-            </ul>
+            </ul> -->
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="#" title="Доставка и оплата">Доставка и оплата</a>
@@ -46,17 +46,17 @@
       <div class="user-block">
         <div class="user-block__element">
           <button class="user-block__link user-block__link--search" type="button"></button>
-          <div class="user-block__search">
+          <!-- <div class="user-block__search">
             <form action="#" method="get">
               <input type="text" name="search" placeholder="Что ищем?">
               <input class="visually-hidden" type="submit" name="button" value="Отправить">
             </form>
-          </div>
+          </div> -->
         </div>
 
         <div class="user-block__element">
           <button class="user-block__link user-block__link--entry" type="button">Вход</button>
-          <div class="user-block__entry">
+          <!-- <div class="user-block__entry">
             <form action="#" method="post">
               <input type="email" name="email" value="Электронная почта">
               <input type="password" name="password" value="Пароль">
@@ -65,11 +65,11 @@
               <a class="password-link" href="#">Забыли пароль?</a>
               <a class="signin-link" href="#">Новая регистрация</a>
             </form>
-          </div>
+          </div> -->
         </div>
         <div class="user-block__element">
           <button class="user-block__link user-block__link--empty-basket" type="button">Пусто</button>
-          <div class="basket">
+          <!-- <div class="basket">
             <table class="basket__table">
               <tr>
                 <td><button class="basket__close-btn" type="button"></button></td>
@@ -88,7 +88,7 @@
             </table>
             <span class="basket__total">Итого: 750 руб.</span>
             <a class="basket__link" href="#">Оформить заказ</a>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -109,11 +109,11 @@
           <h2 class="slide__title">Крембрюле и пломбир с малиновым джемом</h2>
           <a class="slide__btn" href="#">Давайте оба</a>
         </div>
-        <div class="slide slide--1">
+        <div class="slide slide--2">
           <h2 class="slide__title">Шоколадный пломбир и лимонный сорбет</h2>
           <a class="slide__btn" href="#">Давайте оба</a>
         </div>
-        <div class="slide slide--1">
+        <div class="slide slide--3">
           <h2 class="slide__title">Пломбир с помадкой и клубничный щербет</h2>
           <a class="slide__btn" href="#">Давайте оба</a>
         </div>
@@ -125,7 +125,7 @@
         </div>
       </section>
 
-      <div class="banners">
+      <div class="banners clearfix">
         <section class="banner banner--raspberry">
           <h2 class="banner__title">Малинка даром!</h2>
           <p class="banner__text">При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -142,32 +142,32 @@
         <div class="goods-wrap">
           <section class="good">
             <h2 class="visually-hidden">Хит продаж</h2>
-            <div class="good-hit">хит</div>
-            <img src="#" width="10" height="20" alt="Ice-cream">
+            <div class="good-hit"></div>
+            <img class="good__img good__img--hit-1" src="img/bg-hit--1.png" width="267" height="267" alt="Ice-cream">
             <span class="good__price">310₽/кг</span>
             <a class="good__link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             <a class="good__btn" href="#">Быстрый просмотр</a>
           </section>
           <section class="good">
             <h2 class="visually-hidden">Хит продаж</h2>
-            <div class="good-hit">хит</div>
-            <img src="#" width="10" height="20" alt="Ice-cream">
+            <div class="good-hit"></div>
+            <img class="good__img good__img--hit-2" src="img/bg-hit--2.png" width="267" height="267" alt="Ice-cream">
             <span class="good__price">380₽/кг</span>
             <a href="#">Сливочно-кофейное с кусочками шоколада</a>
             <a class="good__btn" href="#">Быстрый просмотр</a>
           </section>
           <section class="good">
             <h2 class="visually-hidden">Хит продаж</h2>
-            <div class="good-hit">хит</div>
-            <img src="#" width="10" height="20" alt="Ice-cream">
+            <div class="good-hit"></div>
+            <img class="good__img good__img--hit-3" src="img/bg-hit--3.png" width="267" height="267" alt="Ice-cream">
             <span class="good__price">355₽/кг</span>
             <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             <a class="good__btn" href="#">Быстрый просмотр</a>
           </section>
           <section class="good">
             <h2 class="visually-hidden">Хит продаж</h2>
-            <div class="good-hit">хит</div>
-            <img src="#" width="10" height="20" alt="Ice-cream">
+            <div class="good-hit"></div>
+            <img class="good__img good__img--hit-4" src="img/bg-hit--4.png" width="267" height="267" alt="Ice-cream">
             <span class="price">415₽/кг</span>
             <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
             <a class="good__btn" href="#">Быстрый просмотр</a>
@@ -180,13 +180,13 @@
         <ul class="shop-description__list">
           <li class="shop-description__text shop-description__text--ice-cream">Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
           <li class="shop-description__text shop-description__text--cow">Закупка ингридиентов  производиться только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-          <li class="shop-description__text shop-description__text--leaf">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+          <li class="shop-description__text shop-description__text--eco">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
           <li class="shop-description__text shop-description__text--temperature">Доставка нашего мороженного до заказчиков
           осуществялется в специальном термопаке, которая не дает мороженному растаять в пути и позволяет ему сохранить свой превосходный вкус.</li>
         </ul>
       </section>
 
-      <div class="news">
+      <div class="news clearfix">
         <article class="blog">
           <p class="blod__text">Новое в нашем блоге</p>
           <h3 class="blog__title">
@@ -194,12 +194,14 @@
           </h3>
         </article>
         <article class="newsletter">
-          <h2 class="visually-hidden">Подпишитесь</h2>
-          <p class="newsletter__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-          <form class="newsletter__form" action="#" method="post">
-            <input class="newsletter__email" type="email" name="email" placeholder="Электронная почта">
-            <input class="newsletter__btn" type="submit" name="button" value="Отправить">
-          </form>
+          <div>
+            <h2 class="visually-hidden">Подпишитесь</h2>
+            <p class="newsletter__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+            <form class="newsletter__form" action="#" method="post">
+              <input class="newsletter__email" type="email" name="email" placeholder="Электронная почта">
+              <input class="newsletter__btn" type="submit" name="button" value="Отправить">
+            </form>
+          </div>
         </article>
       </div>
 
@@ -250,7 +252,7 @@
         </ul>
 
         <address class="footer-author">
-          <img src="#" width="100" height="40" alt="Логин HTML Academy">
+          <img src="img/logo-htmlacademy.svg" width="110" height="40" alt="Логин HTML Academy">
           <p class="footer-author__text">Сделано в
             <a class="footer-author__link" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
           © 2016</p>
