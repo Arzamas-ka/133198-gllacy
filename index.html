@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Gllacy Shop</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -15,7 +16,7 @@
         </a>
         <ul class="navigation__list">
           <li class="navigation__item">
-            <button class="navigation__link" type="button">Каталог</button>
+            <button class="navigation__btn" type="button">Каталог</button>
             <ul class="menu">
               <li class="menu__item">
                 <a class="menu__link" href="#">Новинки</a>
@@ -44,7 +45,9 @@
 
       <div class="user-block">
         <div class="user-block__element">
-          <button class="user-block__link  user-block__link--search" type="button">Поиск</button>
+          <button class="user-block__link  user-block__link--search" type="button">
+            <span class="visually-hidden">Поиск</span>
+          </button>
           <div class="user-block__search">
             <form action="#" method="get">
               <label class="visually-hidden" for="search">Что ищем?</label>
@@ -62,8 +65,7 @@
               <input type="email" name="email" id="email" placeholder="Электронная почта">
               <label class="visually-hidden" for="password">Пароль</label>
               <input type="password" name="password" id="password" placeholder="Пароль">
-              <input class="entry-btn" type="submit" name="submit" value="
-              Войти">
+              <input class="entry-btn" type="submit" name="submit" value="Войти">
               <a class="password-link" href="#" title="Забыли пароль?">Забыли пароль?</a>
               <a class="signin-link" href="#" title="Новая регистрация">Новая регистрация</a>
             </form>
@@ -74,7 +76,11 @@
           <div class="basket">
             <table class="basket__table">
               <tr>
-                <td><button class="basket__close-btn" type="button">Закрыть</button></td>
+                <td>
+                  <button class="basket__close-btn" type="button">
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
+                </td>
                 <td>
                   <a href="#" title="Пломбир с апельсиновым джемом">
                     <img class="basket__img" src="#">
@@ -85,7 +91,11 @@
                 <td>300 руб.</td>
               </tr>
               <tr>
-                <td><button class="basket__close-btn" type="button">Закрыть</button></td>
+                <td>
+                  <button class="basket__close-btn" type="button">
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
+                </td>
                 <td>
                   <a href="#" title="Клубничный пломбир с присыпкой  из белого шоколада">
                     <img class="basket__img" src="#">
@@ -97,7 +107,7 @@
               </tr>
             </table>
             <span class="basket__total">Итого: 750 руб.</span>
-            <a class="basket__link" href="#" title="Оформить заказ">Оформить заказ</a>
+            <a class="basket__btn" href="#" title="Оформить заказ">Оформить заказ</a>
           </div>
         </div>
       </div>
@@ -202,7 +212,7 @@
 
       <div class="news">
         <article class="blog">
-          <p class="blod__text">Новое в нашем блоге</p>
+          <p class="blog__text">Новое в нашем блоге</p>
           <h3 class="blog__title">
             <a href="#" title="10 способов сервировки фруктовых щербетов к столу">10 способов сервировки фруктовых щербетов к столу</a>
           </h3>
@@ -239,16 +249,24 @@
       <div class="container">
         <ul class="footer-social">
           <li>
-            <a class="footer-social__link  footer-social__link--tw" href="#" title="Twitter">Twitter</a>
+            <a class="footer-social__link  footer-social__link--tw" href="#" title="Twitter">
+              <span class="visually-hidden">Twitter</span>
+            </a>
           </li>
           <li>
-            <a class="footer-social__link  footer-social__link--inst" href="#" title="Instagram">Instagram</a>
+            <a class="footer-social__link  footer-social__link--inst" href="#" title="Instagram">
+              <span class="visually-hidden">Instagram</span>
+            </a>
           </li>
           <li>
-            <a class="footer-social__link  footer-social__link--fb" href="#" title="Facebook">Facebook</a>
+            <a class="footer-social__link  footer-social__link--fb" href="#" title="Facebook">
+              <span class="visually-hidden">Facebook</span>
+            </a>
           </li>
           <li>
-            <a class="footer-social__link  footer-social__link--vk" href="#" title="VKontakte">VKontakte</a>
+            <a class="footer-social__link  footer-social__link--vk" href="#" title="VKontakte">
+              <span class="visually-hidden">VKontakte</span>
+            </a>
           </li>
         </ul>
 
@@ -277,15 +295,18 @@
     </footer>
 
     <section class="feedback">
+      <button class="feedback__close-btn" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
       <h3 class="feedback-title">Мы обязательно вам ответим!</h3>
       <form action="#" class="feedback-form">
         <label class="visually-hidden" for="feedback-name"></label>
-        <input class="feedback__name" type="text" name="text" id="feedback-name" placeholder="Как вас зовут?">
+        <input class="feedback__name" type="text" name="feedback-name" id="feedback-name" placeholder="Как вас зовут?">
         <label class="visually-hidden" for="feedback-email"></label>
-        <input class="feedback__email" type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+        <input class="feedback__email" type="email" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
         <label class="visually-hidden" for="feedback-text"></label>
-        <input class="feedback__text" type="text" name="text" id="feedback-text" placeholder="Напишите что-нибудь...">
-        <input class="feedback__submit" type="submit" name="submit" value="Отправить">
+        <input class="feedback__text" type="text" name="feedback-text" id="feedback-text" placeholder="Напишите что-нибудь...">
+        <input class="feedback__submit" type="submit" name="feedback__submit" value="Отправить">
       </form>
     </section>
 
