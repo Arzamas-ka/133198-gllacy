@@ -9,42 +9,40 @@
   </head>
 
   <body>
-    <header class="main-header container">
-      <nav class="navigation">
-        <a class="main-logo" href="#" title="Магазин &laquo;Глейси&raquo;">
-          <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина &laquo;Глейси&raquo;">
-        </a>
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <button class="navigation__btn" type="button">Каталог</button>
-            <ul class="menu">
-              <li class="menu__item">
-                <a class="menu__link" href="#">Новинки</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="catalog.html">Сливочное</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Щербеты</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Фруктовый лед</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Мелорин</a>
-              </li>
-            </ul>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#" title="Доставка и оплата">Доставка и оплата</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#" title="О Компании">О Компании</a></li>
-        </ul>
-      </nav>
+    <header class="main-header  container">
+      <div class="main-header__flex">
+        <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина &laquo;Глейси&raquo;">
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <button class="navigation__btn" type="button">Каталог</button>
+              <ul class="menu">
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Новинки</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="catalog.html">Сливочное</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Щербеты</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Мелорин</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#" title="Доставка и оплата">Доставка и оплата</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#" title="О Компании">О Компании</a></li>
+          </ul>
+        </nav>
 
-      <div class="user-block">
-
+        <div class="user-block">
         <div class="user-block__element">
           <button class="user-block__link  user-block__link--search" type="button">
             <span class="visually-hidden">Поиск</span>
@@ -119,7 +117,7 @@
           </div>
         </div>
       </div>
-
+      </div>
       <div class="main-timetable">
         <p class="main-timetable__text">С 10 до 20, ежедневно</p>
         <a class="main-timetable__tel" href="tel:+78124502525" title="Наш телефон">+7(812) 450-25-25</a>
@@ -137,14 +135,14 @@
           <h2 class="slide__title">Крембрюле и пломбир с малиновым джемом</h2>
           <a class="slide__btn" href="#" title="Давайте оба">Давайте оба</a>
         </div>
-        <div class="slide  slide--2">
+        <!-- <div class="slide  slide--2">
           <h2 class="slide__title">Шоколадный пломбир и лимонный сорбет</h2>
           <a class="slide__btn" href="#" title="Давайте оба">Давайте оба</a>
         </div>
         <div class="slide  slide--3">
           <h2 class="slide__title">Пломбир с помадкой и клубничный щербет</h2>
           <a class="slide__btn" href="#" title="Давайте оба">Давайте оба</a>
-        </div>
+        </div> -->
 
         <div class="slider-control">
           <label for="radio-1"></label>
@@ -261,52 +259,54 @@
     </main>
 
 
-    <footer>
+    <footer class="main-footer">
       <div class="container">
-        <ul class="footer-social">
-          <li>
-            <a class="footer-social__link  footer-social__link--tw" href="#" title="Twitter">
-              <span class="visually-hidden">Twitter</span>
-            </a>
-          </li>
-          <li>
-            <a class="footer-social__link  footer-social__link--inst" href="#" title="Instagram">
-              <span class="visually-hidden">Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a class="footer-social__link  footer-social__link--fb" href="#" title="Facebook">
-              <span class="visually-hidden">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a class="footer-social__link  footer-social__link--vk" href="#" title="VKontakte">
-              <span class="visually-hidden">VKontakte</span>
-            </a>
-          </li>
-        </ul>
+        <div class="footer-wrapper-flex">
+          <ul class="footer-social">
+            <li>
+              <a class="footer-social__link  footer-social__link--tw" href="#" title="Twitter">
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a class="footer-social__link  footer-social__link--inst" href="#" title="Instagram">
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a class="footer-social__link  footer-social__link--fb" href="#" title="Facebook">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a class="footer-social__link  footer-social__link--vk" href="#" title="VKontakte">
+                <span class="visually-hidden">VKontakte</span>
+              </a>
+            </li>
+          </ul>
 
-        <ul class="footer-info">
-          <li class="footer-info__item  footer-info__item--heart">
-            <a class="footer-info__link" href="#" title="Для поставщиков">Для поставщиков</a>
-          </li>
-          <li class="footer-info__item">
-            <a class="footer-info__link" href="#" title="Наши документы">Наши документы</a>
-          </li>
-          <li class="footer-info__item">
-            <a class="footer-info__link" href="#" title="О производстве">О производстве</a>
-          </li>
-          <li class="footer-info__item">
-            <a class="footer-info__link" href="#" title="Экологические стандарты">Экологические стандарты</a>
-          </li>
-        </ul>
+          <ul class="footer-info">
+            <li class="footer-info__item  footer-info__item--heart">
+              <a class="footer-info__link" href="#" title="Для поставщиков">Для поставщиков</a>
+            </li>
+            <li class="footer-info__item">
+              <a class="footer-info__link" href="#" title="Наши документы">Наши документы</a>
+            </li>
+            <li class="footer-info__item">
+              <a class="footer-info__link" href="#" title="О производстве">О производстве</a>
+            </li>
+            <li class="footer-info__item">
+              <a class="footer-info__link" href="#" title="Экологические стандарты">Экологические стандарты</a>
+            </li>
+          </ul>
 
-        <address class="footer-author">
-          <img src="img/logo-htmlacademy.svg" width="110" height="40" alt="Логин HTML Academy">
-          <p class="footer-author__text">Сделано в
-            <a class="footer-author__link" href="https://htmlacademy.ru/" target="_blank" title="HTML Academy">HTML Academy</a>
-          © 2016</p>
-        </address>
+          <address class="footer-author">
+            <img src="img/logo-htmlacademy.svg" width="110" height="40" alt="Логин HTML Academy">
+            <p class="footer-author__text">Сделано в
+              <a class="footer-author__link" href="https://htmlacademy.ru/" target="_blank" title="HTML Academy">HTML Academy</a>
+            © 2016</p>
+          </address>
+        </div>
       </div>
     </footer>
 
@@ -325,7 +325,7 @@
           <input class="feedback__email  field" type="email" name="feedback-email" id="feedback-email">
           <label class="field-label" for="feedback-email">Ваша почта для ответа?</label>
         </div>
-        <div class="feedback__wrapper">          
+        <div class="feedback__wrapper">
           <textarea cols="30" rows="5" class="feedback__text  field" type="text" name="feedback-text" id="feedback-text"></textarea>
           <label class="field-label" for="feedback-text">Напишите что-нибудь...</label>
         </div>

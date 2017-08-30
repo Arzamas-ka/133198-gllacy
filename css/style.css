@@ -74,7 +74,7 @@ button {
 .basket__text:hover,
 .basket__text:active {
   color: #e84d37;
-  border-color:  #e84d37;
+  border-bottom:  1px #e84d37 solid;
 }
 
 .good__title a:hover,
@@ -90,64 +90,6 @@ button {
   color: #ffbc9e;
 }
 
-/*input[name="search"]:hover,
-input[name="email"]:hover,
-input[name="password"]:hover,
-.newsletter__email:hover,
-.feedback__name:hover,
-.feedback__email:hover {
-  border-color: #c7c6c5;
-}*/
-
-
-/*::-webkit-input-placeholder {
-  color: #999999;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-}
-::-moz-placeholder{
-  color: #999999;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-}
-::-ms-input-placeholder {
-  color: #999999;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-}
-
-
-:focus::-webkit-input-placeholder {
-  border-color: #8fbdec;
-  color: #8fbdec;
-  font-size: 11px;
-  transition: all 0.3s ease;
-}*/
-
-
-/*input[type="text"],
-input[type="email"],
-.feedback__text {
-  position: relative;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #000;
-}*/
-
-/*input[name="search"] {
-  width: 293px;
-  resize: none;
-  border-radius: 5px;
-  padding: 12px 0 12px 12px;
-  border: 2px solid #d3d3d2;
-}*/
-
-
-
 
 /*PAGE index.html*/
 
@@ -156,17 +98,23 @@ input[type="email"],
   width: 154px;
 }
 
-.navigation {
+.main-header__flex {
   display: flex;
-  width: 560px;
-  padding-top: 10px;
+  flex-direction: row;
   justify-content: space-between;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.navigation {
+  width: 715px;
 }
 
 .navigation__item {
   position: relative;
   display: inline-block;
   vertical-align: top;
+
 }
 
 .navigation__btn {
@@ -177,6 +125,16 @@ input[type="email"],
   background-color: #87a092;
   color: #fff;
 }
+
+/*.navigation__btn::before {
+  position: absolute;
+  content: '';
+  width: 150px;
+  top: 30px;
+  left: -10px;
+  height: 40px;
+  background-color: red;
+}*/
 
 .navigation__link {
   position: relative;
@@ -216,7 +174,7 @@ input[type="email"],
 .menu {
   position: absolute;
   content: '';
-  top: 43px;
+  top: 40px;
   left: 3px;
   display: none;
   border-radius: 5px;
@@ -285,8 +243,7 @@ input[type="email"],
 }
 
 .user-block {
-  display: flex;
-  padding-top: 10px;
+  width: 269px;
 }
 
 .user-block__element {
@@ -320,6 +277,7 @@ input[type="email"],
 .user-block__search {
   position: absolute;
   top: 37px;
+  display: none;
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -397,6 +355,7 @@ input[name="search"] {
 }
 
 .user-block__entry {
+  display: none;
   position: absolute;
   top: 37px;
   background-color: #f8f7f4;
@@ -459,6 +418,7 @@ input[name="password"] {
 }
 
 .basket {
+  display: none;
   position: absolute;
   top: 37px;
   background-color: #f8f7f4;
@@ -485,7 +445,6 @@ input[name="password"] {
 
 .basket__text {
     color: #323232;
-    border-bottom: 1px #323232 solid;
 }
 
 .basket__table span {
@@ -516,14 +475,15 @@ input[name="password"] {
 }
 
 .main-timetable__text {
+  margin: 0;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 18px;
 }
 
 .main-timetable__tel {
   color: #fff;
   font-size: 22px;
-  line-height: 24px;
+  line-height: 34px;
 }
 
 .user-block__link--full-basket {
@@ -572,6 +532,8 @@ input[name="password"] {
 }
 
 .banners {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 40px;
 }
 
@@ -591,10 +553,13 @@ input[name="password"] {
 .banner__text {
   font-size: 18px;
   line-height: 22px;
+  margin: 0;
   padding: 0 20px;
 }
 
 .banner__btn {
+  display: inline-block;
+  margin: 20px;
   border-radius: 30px;
   color: #fff;
   background: #ef6240;
@@ -623,12 +588,12 @@ input[name="password"] {
   margin-bottom: 40px;
 }
 
-.good:not(:last-child) {
-  margin-right: 16px;
+.good {
+  margin-right: 22px;
 }
 
-.goods-wrap {
-  display: inline;
+.good:nth-child(4n) {
+  margin-right: 0;
 }
 
 .good-hit::before {
@@ -701,6 +666,7 @@ input[name="password"] {
 }
 
 .shop-description {
+  margin-bottom: 40px;
   height: 310px;
   color: #323232;;
   border-radius: 15px;
@@ -745,6 +711,12 @@ input[name="password"] {
   background: url("../img/thermometer.svg") no-repeat 0 0;
 }
 
+.news {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+
 .blog {
   width: 560px;
   height: 220px;
@@ -757,7 +729,7 @@ input[name="password"] {
   line-height: 22px;
   font-weight: 500;
   color: #000;
-  padding: 25px 20px 0 20px;
+  padding: 0 20px;
 }
 
 .blog__title a {
@@ -823,6 +795,7 @@ input[name="button"],
 
 .contacts {
   position: relative;
+  margin-bottom: 20px;
   height: 430px;
   background:  url("../img/map.jpg") no-repeat;
 }
@@ -862,10 +835,20 @@ input[name="button"],
   box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.46);
 }
 
+.main-footer {
+  margin-bottom: 25px;
+}
+
+.footer-wrapper-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-social {
   display: flex;
-  width: 200px;
-  justify-content: space-between;
+  width: 255px;
 }
 
 .footer-social__link {
@@ -879,55 +862,71 @@ input[name="button"],
   border-radius: 50%;
 }
 
-.footer-social__link--tw {
-  background: url("../img/twitter.svg") no-repeat 50% 50%;
-}
-.footer-social__link--tw:hover {
-  background: url("../img/twitter-hover.svg") no-repeat 50% 50%;
-}
-.footer-social__link--tw:active {
-  background: url("../img/twitter-active.svg") no-repeat 50% 50%;
+.footer-social__link:not(last-child) {
+  margin-right: 10px;
 }
 
+.footer-social__link--tw {
+  background: url("../img/twitter.svg") no-repeat 50% 50%;
+  opacity: 0.8;
+}
 
 .footer-social__link--inst {
   background: url("../img/instagram.svg") no-repeat 50% 50%;
-}
-.footer-social__link--inst:hover {
-  background: url("../img/instagram-hover.svg") no-repeat 50% 50%;
-}
-.footer-social__link--inst:active {
-  background: url("../img/instagram-active.svg") no-repeat 50% 50%;
+  opacity: 0.8;
 }
 
 .footer-social__link--fb {
   background: url("../img/fb.svg") no-repeat 50% 50%;
-}
-.footer-social__link--fb:hover {
-  background: url("../img/fb-hover.svg") no-repeat 50% 50%;
-}
-.footer-social__link--fb:active {
-  background: url("../img/fb-active.svg") no-repeat 50% 50%;
+  opacity: 0.8;
 }
 
 .footer-social__link--vk {
   background: url("../img/vk.svg") no-repeat 50% 50%;
+  opacity: 0.8;
 }
+
+.footer-social__link--tw:hover,
+.footer-social__link--inst:hover,
+.footer-social__link--fb:hover,
 .footer-social__link--vk:hover {
-  background: url("../img/vk-hover.svg") no-repeat 50% 50%;
+  opacity: 1;
 }
+
+.footer-social__link--tw:active,
+.footer-social__link--inst:active,
+.footer-social__link--fb:active,
 .footer-social__link--vk:active {
-  background: url("../img/vk-active.svg") no-repeat 50% 50%;
+  opacity: 0.8;
+}
+
+.footer-info {
+  margin: 0 auto;
+  width: 380px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-info__item {
+  margin-right: auto;
+  padding-left: 25px;
 }
 
 .footer-info__item--heart {
-  background: url("../img/heart.svg") no-repeat 50% 50%;
+  background: url("../img/heart.svg") no-repeat 2% 13%;
 }
 
 .footer-info__item a {
   text-decoration: none;
   color: #fff;
   border-bottom: 2px #8ca396 solid;
+}
+
+.footer-info__link {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
 .footer-info__item:nth-child(1) .footer-info__link {
@@ -939,9 +938,14 @@ input[name="button"],
   font-weight: 400;
 }
 
+.footer-author {
+  width: 190px;
+}
+
 .footer-author__text {
   font-size: 12px;
   font-weight: 400;
+  margin: 0;
 }
 
 .footer-author__link {
@@ -1022,9 +1026,13 @@ input[name="button"],
   display: none;
 }
 
-
-.breadcrumbs {
+.breadcrumbs__list {
   display: flex;
+  flex-direction: row;
+}
+
+.breadcrumbs__item {
+  padding-right: 10px;
 }
 
 .breadcrumbs__link {
@@ -1032,6 +1040,7 @@ input[name="button"],
   font-weight: 400;
   text-decoration: none;
   color: #fff;
+
 }
 
 .filters {
@@ -1040,6 +1049,7 @@ input[name="button"],
 }
 
 .filter__title {
+  margin: 5px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -1064,7 +1074,7 @@ input[name="button"],
 
 .filter-range__control {
   position: relative;
-  padding: 20px;
+  padding: 15px;
   border-radius: 20px;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1079,7 +1089,7 @@ input[name="button"],
 .toggle-min,
 .toggle-max {
 position: absolute;
-top: 11px;
+top: 5px;
 left: 40px;
 width: 4px;
 height: 4px;
@@ -1107,10 +1117,10 @@ left: 150px;
 .filter-richness__item,
 .filter-filler__item {
   display: inline-block;
+  margin-right: 15px;
 }
 
 .filter-btn {
-  margin: 37px 0 0 11px;
   padding: 5px 26px 5px 28px;
   font-weight: 500;
   background-color: #a9bab0;
