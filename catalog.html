@@ -133,11 +133,13 @@
       <div class="breadcrumbs">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#" title="Главная">Главная  &raquo;</a>
+            <a class="breadcrumbs__link" href="#" title="Главная">Главная</a>
           </li>
+          <li class="breadcrumbs__item">&raquo;</li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#" title="Каталог">Каталог  &raquo;</a>
+            <a class="breadcrumbs__link" href="#" title="Каталог">Каталог</a>
           </li>
+          <li class="breadcrumbs__item">&raquo;</li>
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="#" title="Сливочное">Сливочное</a>
           </li>
@@ -148,77 +150,79 @@
 
       <div class="filters">
         <form action="#" method="get">
-          <div class="filter__sort">
-            <h3 class="filter__title">Сортировка:</h3>
-            <select class="filter-sort__list" name="sort">
-              <option>по популярности</option>
-              <option>сначала недорогие</option>
-              <option>сначала дорогие</option>
-              <option>по жирности</option>
-            </select>
+          <div class="filter-wrap">
+            <div class="filter__sort">
+              <h3 class="filter__title">Сортировка:</h3>
+              <select class="filter-sort__list" name="sort">
+                <option>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
+              </select>
+            </div>
+
+            <div class="filter-range">
+              <h3 class="filter__title">Цена: 100 руб.-500 руб.</h3>
+               <div class="filter-range__control">
+                  <div class="filter-range__scale"></div>
+                  <div class="toggle-min"></div>
+                  <div class="toggle-max"></div>
+              </div>
+            </div>
+
+            <fieldset class="filter-richness">
+              <legend class="filter__title">Жирность:</legend>
+              <div class="filter-richness__wrap">
+                <div class="filter-richness__item">
+                  <input type="radio" id="filter-richness__1"  name="percent" checked>
+                  <label class="filter-richness__radio" for="filter-richness__1">0%</label>
+                </div>
+                <div class="filter-richness__item">
+                  <input type="radio" id="filter-richness__2"  name="percent">
+                  <label class="filter-richness__radio" for="filter-richness__2">до 10%</label>
+                </div>
+                <div class="filter-richness__item">
+                  <input type="radio" id="filter-richness__3"  name="percent">
+                  <label class="filter-richness__radio" for="filter-richness__3">до 30%</label>
+                </div>
+                <div class="filter-richness__item">
+                  <input type="radio" id="filter-richness__4"  name="percent">
+                  <label class="filter-richness__radio" for="filter-richness__4">выше 10%</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter-filler">
+              <legend class="filter__title">Наполнители:</legend>
+              <div class="filter-filler__wrap">
+                <div class="filter-filler__item">
+                  <input type="checkbox" id="filter-filler__1"  name="filler" checked>
+                  <label class="filter-filler__checkbox" for="filter-filler__1">шоколадные</label>
+                </div>
+                <div class="filter-filler__item">
+                  <input type="checkbox" id="filter-filler__2"  name="filler">
+                  <label class="filter-filler__checkbox" for="filter-filler__2">сахарные присыпки</label>
+                </div>
+                <div class="filter-filler__item">
+                  <input type="checkbox" id="filter-filler__3"  name="filler">
+                  <label class="filter-filler__checkbox" for="filter-filler__3">фрукты</label>
+                </div>
+                <div class="filter-filler__item">
+                  <input type="checkbox" id="filter-filler__4"  name="filler">
+                  <label class="filter-filler__checkbox" for="filter-filler__4">сиропы</label>
+                </div>
+                <div class="filter-filler__item">
+                  <input type="checkbox" id="filter-filler__5"  name="filler">
+                  <label class="filter-filler__checkbox" for="filter-filler__5">джемы</label>
+                </div>
+              </div>
+            </fieldset>
+            <input class="filter-btn" type="submit" name="submit" value="Применить">
           </div>
-
-          <div class="filter-range">
-            <h3 class="filter__title">Цена: 100 руб.-500 руб.</h3>
-             <div class="filter-range__control">
-                <div class="filter-range__scale"></div>
-                <div class="toggle-min"></div>
-                <div class="toggle-max"></div>
-            </div>
-          </div>
-
-          <fieldset class="filter-richness">
-            <legend class="filter__title">Жирность:</legend>
-            <div class="filter-richness__wrap">
-              <div class="filter-richness__item">
-                <input type="radio" id="filter-richness__1"  name="percent" checked>
-                <label class="filter-richness__radio" for="filter-richness__1">0%</label>
-              </div>
-              <div class="filter-richness__item">
-                <input type="radio" id="filter-richness__2"  name="percent">
-                <label class="filter-richness__radio" for="filter-richness__2">до 10%</label>
-              </div>
-              <div class="filter-richness__item">
-                <input type="radio" id="filter-richness__3"  name="percent">
-                <label class="filter-richness__radio" for="filter-richness__3">до 30%</label>
-              </div>
-              <div class="filter-richness__item">
-                <input type="radio" id="filter-richness__4"  name="percent">
-                <label class="filter-richness__radio" for="filter-richness__4">выше 10%</label>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="filter-filler">
-            <legend class="filter__title">Наполнители:</legend>
-            <div class="filter-filler__wrap">
-              <div class="filter-filler__item">
-                <input type="checkbox" id="filter-filler__1"  name="filler" checked>
-                <label class="filter-filler__checkbox" for="filter-filler__1">шоколадные</label>
-              </div>
-              <div class="filter-filler__item">
-                <input type="checkbox" id="filter-filler__2"  name="filler">
-                <label class="filter-filler__checkbox" for="filter-filler__2">сахарные присыпки</label>
-              </div>
-              <div class="filter-filler__item">
-                <input type="checkbox" id="filter-filler__3"  name="filler">
-                <label class="filter-filler__checkbox" for="filter-filler__3">фрукты</label>
-              </div>
-              <div class="filter-filler__item">
-                <input type="checkbox" id="filter-filler__4"  name="filler">
-                <label class="filter-filler__checkbox" for="filter-filler__4">сиропы</label>
-              </div>
-              <div class="filter-filler__item">
-                <input type="checkbox" id="filter-filler__5"  name="filler">
-                <label class="filter-filler__checkbox" for="filter-filler__5">джемы</label>
-              </div>
-            </div>
-          </fieldset>
-          <input class="filter-btn" type="submit" name="submit" value="Применить">
         </form>
       </div>
 
-      <div class="goods">
+      <div class="goods  goods-catalog">
         <div class="goods-wrap">
           <section class="good">
             <div class="good__hover">
@@ -260,7 +264,6 @@
               <a class="good__btn" href="#" title="Быстрый просмотр">Быстрый просмотр</a>
             </div>
           </section>
-
           <section class="good">
             <div class="good__hover">
               <img class="good__img good__img--5" src="img/bg-img--5.png" width="267" alt="Сливочное с брусничным джемом">
@@ -301,7 +304,6 @@
               <a class="good__btn" href="#" title="Быстрый просмотр">Быстрый просмотр</a>
             </div>
           </section>
-
           <section class="good">
             <div class="good__hover">
               <img class="good__img good__img--9" src="img/bg-img--9.png" width="267" alt="Сливочное-ванильное с кусочками шоколада">

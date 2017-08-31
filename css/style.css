@@ -27,6 +27,11 @@ button {
   cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   box-sizing: border-box;
   width: 1200px;
@@ -34,13 +39,17 @@ button {
   padding: 0 27px;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
-  padding: 0;
   height: 1px;
   margin: -1px;
   border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -86,8 +95,11 @@ button {
 .footer-info__link:hover,
 .footer-info__link:active,
 .footer-author__link:hover,
-.footer-author__link:active {
+.footer-author__link:active,
+.breadcrumbs__link:hover,
+.breadcrumbs__link:active {
   color: #ffbc9e;
+  border-color: #ffbc9e;
 }
 
 
@@ -110,15 +122,17 @@ button {
   width: 715px;
 }
 
+.navigation__list {
+  display: flex;
+  align-items: baseline;
+}
+
 .navigation__item {
   position: relative;
-  display: inline-block;
-  vertical-align: top;
-
+  white-space: nowrap;
 }
 
 .navigation__btn {
-  display: inline-block;
   padding: 7px 13px;
   border: none;
   font-weight: inherit;
@@ -243,7 +257,7 @@ button {
 }
 
 .user-block {
-  width: 269px;
+  display: flex;
 }
 
 .user-block__element {
@@ -579,6 +593,15 @@ input[name="password"] {
   background: #3a1d13 url("../img/bg-chocolate.jpg") no-repeat 50% 50%;
 }
 
+.goods-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goods-catalog {
+  margin-bottom: 50px;
+}
+
 .good {
   position: relative;
   display: inline-block;
@@ -586,10 +609,7 @@ input[name="password"] {
   text-align: center;
   width: 267px;
   margin-bottom: 40px;
-}
-
-.good {
-  margin-right: 22px;
+  margin-right: 26px;
 }
 
 .good:nth-child(4n) {
@@ -901,26 +921,27 @@ input[name="button"],
 }
 
 .footer-info {
-  margin: 0 auto;
   width: 380px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .footer-info__item {
-  margin-right: auto;
-  padding-left: 25px;
+  padding: 0 25px;
+}
+
+.footer-info__item:nth-child(2) {
+  padding-left: 13px;
 }
 
 .footer-info__item--heart {
-  background: url("../img/heart.svg") no-repeat 2% 13%;
+  background: url("../img/heart.svg") no-repeat 2% 80%;
 }
 
 .footer-info__item a {
   text-decoration: none;
   color: #fff;
-  border-bottom: 2px #8ca396 solid;
+  border-bottom: 1px #8ca396 solid;
 }
 
 .footer-info__link {
@@ -952,7 +973,7 @@ input[name="button"],
   font-size: 12px;
   text-decoration: none;
   color: #fff;
-  border-bottom: 2px #8ca396 solid;
+  border-bottom: 1px #8ca396 solid;
 }
 
 
@@ -1036,16 +1057,22 @@ input[name="button"],
 }
 
 .breadcrumbs__link {
+  position: relative;
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
   color: #fff;
-
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
 }
 
 .filters {
-  width: 880px;
   margin-bottom: 40px;
+}
+
+.filter-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 
 .filter__title {
@@ -1055,26 +1082,37 @@ input[name="button"],
   font-weight: 500;
 }
 
-.filter-sort__list option,
-.filter-richness__radio,
-.filter-filler__checkbox {
-
-}
-
 .filter-sort__list,
-.filter-range__control,
-.filter-richness__wrap,
-.filter-filler__wrap {
-  padding: 5px;
+.filter-range__control {
+  padding: 8px;
   border-radius: 20px;
   color: #fff;
-  font-weight: 500;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-sort__list option {
+  color: #000;
+}
+
+.filter-richness__wrap,
+.filter-filler__wrap {
+  padding: 10px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-richness__radio,
+.filter-filler__checkbox {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-right: 15px;
 }
 
 .filter-range__control {
   position: relative;
-  padding: 15px;
+  padding: 17px;
   border-radius: 20px;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1088,20 +1126,19 @@ input[name="button"],
 
 .toggle-min,
 .toggle-max {
-position: absolute;
-top: 5px;
-left: 40px;
-width: 4px;
-height: 4px;
-border: 10px solid white;
-background-color: #ababab;
-border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 40px;
+  width: 4px;
+  height: 4px;
+  border: 10px solid white;
+  background-color: #ababab;
+  border-radius: 50%;
 }
 
 .toggle-max {
-left: 150px;
+  left: 150px;
 }
-
 
 .filter-richness,
 .filter-filler {
@@ -1117,11 +1154,18 @@ left: 150px;
 .filter-richness__item,
 .filter-filler__item {
   display: inline-block;
-  margin-right: 15px;
+}
+
+.filter__sort,
+.filter-range,
+.filter-richness,
+.filter-filler {
+  margin: 0 15px 15px 0;
 }
 
 .filter-btn {
-  padding: 5px 26px 5px 28px;
+  align-self: center;
+  padding: 6px 25px;
   font-weight: 500;
   background-color: #a9bab0;
   border: 2px solid #fff;
@@ -1144,7 +1188,9 @@ left: 150px;
 
 .pagination {
   text-align: right;
-  margin: 30px 0;
+  padding-bottom: 30px;
+  border-bottom: 2px #a9bbb1 solid;
+  margin-bottom: 20px;
 }
 
 .pagination__list li {
