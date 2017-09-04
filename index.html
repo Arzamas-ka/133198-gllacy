@@ -53,8 +53,8 @@
               <button class="user-block__link  user-block__link--search" type="button">
                 <span class="visually-hidden">Поиск</span>
               </button>
-              <div class="user-block__container">
-                <form class="user-block__search" action="#" method="get">
+              <div class="user-block__search">
+                <form class="user-block__search-form" action="#" method="get">
                   <div class="user-block__wrapper">
                     <input class="field" type="text" name="search" id="search">
                     <label class="field-label" for="search">Что ищем?</label>
@@ -63,10 +63,11 @@
                 </form>
               </div>
             </div>
+
             <div class="user-block__element">
               <button class="user-block__link  user-block__link--entry" type="button">Вход</button>
               <div class="user-block__entry">
-                <form action="#" method="post">
+                <form class="user-block__entry-form" action="#" method="post">
                   <div class="user-block__wrapper">
                     <input class="field" type="email" name="email" id="email">
                     <label class="field-label" for="email">Электронная почта</label>
@@ -76,50 +77,55 @@
                     <label class="field-label" for="password">Пароль</label>
                   </div>
                     <input class="entry-btn" type="submit" name="submit" value="Войти">
-                    <a class="password-link" href="#" title="Забыли пароль?">Забыли пароль?</a>
-                    <a class="signin-link" href="#" title="Новая регистрация">Новая регистрация</a>
+                    <div class="entry-link">
+                      <a class="password-link" href="#" title="Забыли пароль?">Забыли пароль?</a>
+                      <a class="signin-link" href="#" title="Новая регистрация">Новая регистрация</a>
+                    </div>
                 </form>
-              </div>
-            </div>
+               </div>
+             </div>
+
             <div class="user-block__element">
               <button class="user-block__link  user-block__link--empty-basket" type="button">Пусто</button>
               <div class="basket">
-                <table class="basket__table" cols="5">
-                  <tr>
-                    <td>
-                      <button class="basket__close-btn" type="button">
-                        <span class="visually-hidden">Закрыть</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
-                      </button>
-                    </td>
-                    <td>
-                      <a href="#" title="Пломбир с апельсиновым джемом">
-                        <img class="basket__img" src="img/basket-img--1.png" width="33" height="33">
-                      </a>
-                    </td>
-                    <td width="230"><a class="basket__text" href="#">Пломбир с апельсиновым джемом</a></td>
-                    <td>1,5 кг х <span>200 руб.</span></td>
-                    <td>300 руб.</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button class="basket__close-btn" type="button">
-                        <span class="visually-hidden">Закрыть</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
-                      </button>
-                    </td>
-                    <td>
-                      <a href="#" title="Клубничный пломбир с присыпкой  из белого шоколада">
-                        <img class="basket__img" src="img/basket-img--2.png" width="33" height="33"
-                      </a>
-                    </td>
-                    <td><a class="basket__text" href="#">Клубничный пломбир с присыпкой  из белого шоколада</a></td>
-                    <td>1,5 кг х <span>300 руб.</span></td>
-                    <td>450 руб.</td>
-                  </tr>
-                </table>
-                <span class="basket__total">Итого: 750 руб.</span>
-                <a class="basket__btn" href="#" title="Оформить заказ">Оформить заказ</a>
+                <div class="basket-form">
+                  <table class="basket__table" cols="5">
+                    <tr>
+                      <td>
+                        <button class="basket__close-btn" type="button">
+                          <span class="visually-hidden">Закрыть</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+                        </button>
+                      </td>
+                      <td class="basket__link-img">
+                        <a href="#" title="Пломбир с апельсиновым джемом">
+                          <img class="basket__img" src="img/basket-img--1.png" width="33" height="33">
+                        </a>
+                      </td>
+                      <td width="230"><a class="basket__text" href="#">Пломбир с апельсиновым джемом</a></td>
+                      <td>1,5 кг х <span>200 руб.</span></td>
+                      <td>300 руб.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <button class="basket__close-btn" type="button">
+                          <span class="visually-hidden">Закрыть</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+                        </button>
+                      </td>
+                      <td class="basket__link-img">
+                        <a href="#" title="Клубничный пломбир с присыпкой  из белого шоколада">
+                          <img class="basket__img" src="img/basket-img--2.png" width="33" height="33"
+                        </a>
+                      </td>
+                      <td><a class="basket__text" href="#">Клубничный пломбир с присыпкой  из белого шоколада</a></td>
+                      <td>1,5 кг х <span>300 руб.</span></td>
+                      <td>450 руб.</td>
+                    </tr>
+                  </table>
+                  <span class="basket__total">Итого: 750 руб.</span>
+                  <a class="basket__btn" href="#" title="Оформить заказ">Оформить заказ</a>
+                </div>
               </div>
             </div>
           </div>
@@ -313,7 +319,7 @@
     </footer>
     </div>
   </div>
-    <!-- <section class="feedback">
+    <section class="feedback  feedback-show">
       <button class="feedback__close-btn" type="button">
         <span class="visually-hidden">Закрыть</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
@@ -329,12 +335,12 @@
           <label class="field-label" for="feedback-email">Ваша почта для ответа?</label>
         </div>
         <div class="feedback__wrapper">
-          <textarea cols="30" rows="5" class="feedback__text  field" type="text" name="feedback-text" id="feedback-text"></textarea>
+          <textarea cols="30" rows="6" class="feedback__text  field" type="text" name="feedback-text" id="feedback-text"></textarea>
           <label class="field-label" for="feedback-text">Напишите что-нибудь...</label>
         </div>
           <input class="feedback__submit" type="submit" name="feedback__submit" value="Отправить">
       </form>
-    </section> -->
+    </section>
 
     <script src="js/javascript.js"></script>
   </body>
