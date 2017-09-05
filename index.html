@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 
+
   <body>
     <input type="radio" name="toggle" id="radio-1" checked>
     <input type="radio" name="toggle" id="radio-2">
@@ -130,14 +131,16 @@
             </div>
           </div>
           </div>
-          <div class="main-timetable">
-            <p class="main-timetable__text">С 10 до 20, ежедневно</p>
-            <a class="main-timetable__tel" href="tel:+78124502525" title="Наш телефон">+7(812) 450-25-25</a>
-          </div>
         </header>
 
 
         <main class="container">
+          <div class="main__info-flex">
+            <div class="main-timetable">
+              <p class="main-timetable__text">С 10 до 20, ежедневно</p>
+              <a class="main-timetable__tel" href="tel:+78124502525" title="Наш телефон">8 812 450-25-25</a>
+            </div>
+          </div>
           <section class="slider">
             <div class="slide"  id="slide--1">
               <h2 class="slide__title">Крембрюле и пломбир с малиновым джемом</h2>
@@ -151,7 +154,6 @@
               <h2 class="slide__title">Пломбир с помадкой и клубничный щербет</h2>
               <a class="slide__btn" href="#" title="Давайте оба">Давайте оба!</a>
             </div>
-
             <div class="slider-control">
               <label for="radio-1"></label>
               <label for="radio-2"></label>
@@ -264,61 +266,58 @@
               <a class="address__btn" href="#">Форма обратной связи</a>
             </section>
           </div>
-        </main>
+      </main>
 
 
-        <footer class="main-footer">
-      <div class="container">
-        <div class="footer-wrapper-flex">
-          <ul class="footer-social">
-            <li>
-              <a class="footer-social__link  footer-social__link--tw" href="#" title="Twitter">
-                <span class="visually-hidden">Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a class="footer-social__link  footer-social__link--inst" href="#" title="Instagram">
-                <span class="visually-hidden">Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a class="footer-social__link  footer-social__link--fb" href="#" title="Facebook">
-                <span class="visually-hidden">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a class="footer-social__link  footer-social__link--vk" href="#" title="VKontakte">
-                <span class="visually-hidden">VKontakte</span>
-              </a>
-            </li>
-          </ul>
+     <footer class="main-footer  container">
+      <div class="footer-wrapper-flex">
+        <ul class="footer-social">
+          <li>
+            <a class="footer-social__link  footer-social__link--tw" href="#" title="Twitter">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li>
+            <a class="footer-social__link  footer-social__link--inst" href="#" title="Instagram">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a class="footer-social__link  footer-social__link--fb" href="#" title="Facebook">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a class="footer-social__link  footer-social__link--vk" href="#" title="VKontakte">
+              <span class="visually-hidden">VKontakte</span>
+            </a>
+          </li>
+        </ul>
 
-          <ul class="footer-info">
-            <li class="footer-info__item  footer-info__item--heart">
-              <a class="footer-info__link" href="#" title="Для поставщиков">Для поставщиков</a>
-            </li>
-            <li class="footer-info__item">
-              <a class="footer-info__link" href="#" title="Наши документы">Наши документы</a>
-            </li>
-            <li class="footer-info__item">
-              <a class="footer-info__link" href="#" title="О производстве">О производстве</a>
-            </li>
-            <li class="footer-info__item">
-              <a class="footer-info__link" href="#" title="Экологические стандарты">Экологические стандарты</a>
-            </li>
-          </ul>
+        <ul class="footer-info">
+          <li class="footer-info__item  footer-info__item--heart">
+            <a class="footer-info__link" href="#" title="Для поставщиков">Для поставщиков</a>
+          </li>
+          <li class="footer-info__item">
+            <a class="footer-info__link" href="#" title="Наши документы">Наши документы</a>
+          </li>
+          <li class="footer-info__item">
+            <a class="footer-info__link" href="#" title="О производстве">О производстве</a>
+          </li>
+          <li class="footer-info__item">
+            <a class="footer-info__link" href="#" title="Экологические стандарты">Экологические стандарты</a>
+          </li>
+        </ul>
 
-          <address class="footer-author">
-            <img src="img/logo-htmlacademy.svg" width="110" height="40" alt="Логин HTML Academy">
-            <p class="footer-author__text">Сделано в
-              <a class="footer-author__link" href="https://htmlacademy.ru/" target="_blank" title="HTML Academy">HTML Academy</a>
-            © 2016</p>
-          </address>
-        </div>
+        <address class="footer-author">
+          <img src="img/logo-htmlacademy.svg" width="110" height="40" alt="Логин HTML Academy">
+          <p class="footer-author__text">Сделано в
+            <a class="footer-author__link" href="https://htmlacademy.ru/" target="_blank" title="HTML Academy">HTML Academy</a>
+          © 2016</p>
+        </address>
       </div>
-    </footer>
-    </div>
-  </div>
+     </footer>
+
     <section class="feedback  feedback-show">
       <button class="feedback__close-btn" type="button">
         <span class="visually-hidden">Закрыть</span>
@@ -343,5 +342,5 @@
     </section>
 
     <script src="js/javascript.js"></script>
-  </body>
-</html>
+   </body>
+  </html>

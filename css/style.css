@@ -1,8 +1,8 @@
 body {
   min-height: 100vh;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
-  width: 100%;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -45,7 +45,6 @@ body > input[type="checkbox"] {
 .content-wrapper {
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 ul {
@@ -61,6 +60,14 @@ a {
 
 button {
   cursor: pointer;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 img {
@@ -155,7 +162,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .main-header__flex {
@@ -346,7 +353,7 @@ input[type="radio"].visually-hidden {
 .user-block__link--entry,
 .user-block__link--empty-basket,
 .user-block__link--full-basket {
-  padding-left: 35px;
+  padding-left: 30px;
 }
 
 .user-block__search-form {
@@ -608,20 +615,30 @@ input[name="password"] {
   box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.46);
 }
 
+.main__info-flex {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .main-timetable {
-  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  width: 175px;
 }
 
 .main-timetable__text {
   margin: 0;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 16px;
 }
 
 .main-timetable__tel {
   color: #fff;
   font-size: 22px;
-  line-height: 34px;
+  line-height: 32px;
 }
 
 .user-block__link--full-basket {
@@ -656,7 +673,7 @@ input[name="password"] {
 
 .slide__title {
   display: block;
-  width: 700px;
+  width: 670px;
   margin: 0 auto;
   margin-bottom: 30px;
   font-weight: 700;
@@ -672,7 +689,7 @@ input[name="password"] {
   border-radius: 40px;
   text-align: center;
   color: #fff;
-  padding: 12px 50px;
+  padding: 12px 42px;
   font-size: 32px;
   line-height: 44px;
   font-weight: inherit;
@@ -750,7 +767,7 @@ input[name="password"] {
 
 .banner__title {
   margin: 0;
-  padding: 20px;
+  padding: 15px;
   font-size: 35px;
   line-height: 41px;
 }
@@ -764,11 +781,12 @@ input[name="password"] {
 
 .banner__btn {
   display: inline-block;
-  margin: 20px;
+  margin: 40px 20px 20px 0;
+  float: right;
   border-radius: 30px;
   color: #fff;
   background: #ef6240;
-  padding: 15px 22px;
+  padding: 11px 20px;
   font-size: 18px;
   line-height: 24px;
   border: none;
@@ -790,7 +808,7 @@ input[name="password"] {
 }
 
 .goods-catalog {
-  margin-bottom: 50px;
+  margin-bottom: 33px;
 }
 
 .good {
@@ -829,7 +847,7 @@ input[name="password"] {
   font-size: 45px;
   line-height: 45px;
   top: 167px;
-  left: 13px;
+  left: 11px;
 }
 
 .good__price span {
@@ -840,7 +858,7 @@ input[name="password"] {
 .good__title {
   text-align: center;
   margin: 0;
-  padding: 10px 13px;
+  padding: 7px 17px;
 }
 
 .good__title a {
@@ -894,10 +912,11 @@ input[name="password"] {
 
 .shop-description__title {
   margin: 0;
-  padding-left: 20px;
-  padding-top: 30px;
+  padding-left: 18px;
+  padding-top: 22px;
   font-size: 24px;
   font-weight: 500;
+  line-height: 30px;
 }
 
 .shop-description__list {
@@ -909,9 +928,10 @@ input[name="password"] {
   display: inline-block;
   width: 485px;
   font-weight: normal;
-  padding-left: 60px;
+  padding-left: 65px;
   padding-top: 15px;
   line-height: 22px;
+  font-weight: 400;
 }
 
 .shop-description__text--ice-cream {
@@ -1055,7 +1075,7 @@ input[name="button"],
 }
 
 .main-footer {
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .footer-wrapper-flex {
@@ -1250,25 +1270,35 @@ input[name="button"],
 }
 
 .breadcrumbs__list {
+  width: 585px;
   display: flex;
   flex-direction: row;
 }
 
 .breadcrumbs__item {
-  padding-right: 10px;
+  padding-right: 6px;
+  line-height: 24px;
 }
 
 .breadcrumbs__link {
   position: relative;
   font-size: 14px;
+  line-height: 16px;
   font-weight: 400;
   text-decoration: none;
   color: #fff;
   border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
 }
 
+.catalog-title {
+  margin: 0;
+  font-size: 35px;
+  line-height: 41px;
+  margin-bottom: 20px;
+}
+
 .filters {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .filter-wrap {
@@ -1278,15 +1308,14 @@ input[name="button"],
 }
 
 .filter__title {
-  margin: 5px;
+  margin: 5px 15px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
 }
 
-.filter-sort__list,
-.filter-range__control {
-  padding: 8px;
+.filter-sort__list {
+  padding: 7px 17px 7px 7px;
   border-radius: 20px;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1294,11 +1323,13 @@ input[name="button"],
 
 .filter-sort__list option {
   color: #000;
+  font-weight: 500;
+
 }
 
 .filter-richness__wrap,
 .filter-filler__wrap {
-  padding: 10px;
+  padding: 9px 10px;
   border-radius: 20px;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1311,22 +1342,21 @@ input[name="button"],
   font-weight: 500;
   line-height: 18px;
   margin: 0 10px;
-  padding-left: 35px;
+  padding-left: 26px;
   opacity: 0.8;
 }
 
-/*.filter-richness__radio:nth-child(1),
-.filter-filler__checkbox:nth-child(1) {
-  padding-left: 40px;
-}*/
+.filter-filler__checkbox {
+  margin-right: 13px;
+}
 
 .filter-richness__radio-indicator::before {
   position: absolute;
   content: '';
-  top: -3px;
-  left: 0;
-  width: 18px;
-  height: 18px;
+  top: -2px;
+  left: -9px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   border: 4px #fff solid;
 }
@@ -1334,10 +1364,10 @@ input[name="button"],
 input[name="percent"]:checked + .filter-richness__radio .filter-richness__radio-indicator:after {
   position: absolute;
   content: "";
-  left: 8px;
+  left: -2px;
   top: 5px;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   background-color: #fff;
   border-radius: 50%;
 }
@@ -1359,7 +1389,7 @@ input[name="percent"]:checked + .filter-richness__radio .filter-richness__radio-
 .filter-filler__checkbox-indicator::before {
   position: absolute;
   content: "";
-  left: 0;
+  left: -8px;
   top: -2px;
   width: 23px;
   height: 23px;
@@ -1370,7 +1400,7 @@ input[name="percent"]:checked + .filter-richness__radio .filter-richness__radio-
 input[name="filler"]:checked + .filter-filler__checkbox .filter-filler__checkbox-indicator:before {
   position: absolute;
   content: "";
-  left: 0;
+  left: -8px;
   top: -2px;
   width: 23px;
   height: 23px;
@@ -1380,7 +1410,7 @@ input[name="filler"]:checked + .filter-filler__checkbox .filter-filler__checkbox
 
 .filter-range__control {
   position: relative;
-  padding: 17px;
+  padding: 16px 23px;
   border-radius: 20px;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1388,15 +1418,15 @@ input[name="filler"]:checked + .filter-filler__checkbox .filter-filler__checkbox
 
 .filter-range__scale {
   background-color: #fff;
-  width: 180px;
+  width: 176px;
   height: 4px;
 }
 
 .toggle-min,
 .toggle-max {
   position: absolute;
-  top: 5px;
-  left: 40px;
+  top: 6px;
+  left: 35px;
   width: 4px;
   height: 4px;
   border: 10px solid white;
@@ -1405,7 +1435,7 @@ input[name="filler"]:checked + .filter-filler__checkbox .filter-filler__checkbox
 }
 
 .toggle-max {
-  left: 150px;
+  left: 132px;
 }
 
 .filter-richness,
@@ -1458,7 +1488,7 @@ input[name="filler"]:checked + .filter-filler__checkbox .filter-filler__checkbox
   text-align: right;
   padding-bottom: 30px;
   border-bottom: 2px #a9bbb1 solid;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .pagination__list li {
