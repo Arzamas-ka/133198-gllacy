@@ -12,9 +12,9 @@
   <body>
     <header class="main-header container">
       <div class="main-header__flex">
-         <a class="logo__link" href="index.html" title="Магазин &laquo;Глейси&raquo;">
-          <img img src="img/logo.svg" width="154" height="64" alt="Логотип магазина &laquo;Глейси&raquo;">
-         </a>
+        <a class="logo__link" href="index.html" title="Магазин Глейси">
+         <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
+        </a>
          <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -47,10 +47,10 @@
         </nav>
 
         <div class="user-block">
-        <div class="user-block__element">
-          <button class="user-block__link  user-block__link--search" type="button">
-            <span class="visually-hidden">Поиск</span>
-          </button>
+          <div class="user-block__element">
+            <button class="user-block__link  user-block__link--search" type="button">
+             <span class="visually-hidden">Поиск</span>
+            </button>
           <div class="user-block__search">
             <form class="user-block__search-form" action="#" method="get">
               <div class="user-block__wrapper">
@@ -97,10 +97,12 @@
                   </td>
                   <td class="basket__link-img">
                     <a href="#" title="Пломбир с апельсиновым джемом">
-                      <img class="basket__img" src="img/basket-img--1.png" width="33" height="33"
+                      <img class="basket__img" src="img/basket-img--1.png" width="33" height="33" alt="">
                     </a>
                   </td>
-                  <td width="230"><a class="basket__text" href="#">Пломбир с апельсиновым джемом</a></td>
+                  <td class="basket__link-text">
+                    <a class="basket__text" href="#">Пломбир с апельсиновым джемом</a>
+                  </td>
                   <td>1,5 кг х <span>200 руб.</span></td>
                   <td>300 руб.</td>
                 </tr>
@@ -113,10 +115,12 @@
                   </td>
                   <td class="basket__link-img">
                     <a href="#" title="Клубничный пломбир с присыпкой  из белого шоколада">
-                      <img class="basket__img" src="img/basket-img--2.png" width="33" height="33"
+                      <img class="basket__img" src="img/basket-img--2.png" width="33" height="33" alt="">
                     </a>
                   </td>
-                  <td><a class="basket__text" href="#">Клубничный пломбир с присыпкой  из белого шоколада</a></td>
+                  <td>
+                    <a class="basket__text" href="#">Клубничный пломбир с присыпкой  из белого шоколада</a>
+                  </td>
                   <td>1,5 кг х <span>300 руб.</span></td>
                   <td>450 руб.</td>
                 </tr>
@@ -127,7 +131,7 @@
           </div>
         </div>
       </div>
-      </div>
+     </div>
     </header>
 
 
@@ -381,7 +385,9 @@
               <span class="visually-hidden">Предыдущая страницы</span>
             </a>
           </li>
-          <li><a class="pagination__link  pagination__link--current-page" href="#" title="Cтраница 1">1</a></li>
+          <li>
+            <a class="pagination__link  pagination__link--current-page" href="#" title="Cтраница 1">1</a>
+          </li>
           <li><a class="pagination__link" href="#" title="Cтраница 2">2</a></li>
           <li><a class="pagination__link" href="#" title="Cтраница 3">3</a></li>
           <li><a class="pagination__link" href="#" title="Cтраница 4">4</a></li>

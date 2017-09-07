@@ -566,6 +566,10 @@ input[name="password"] {
   border-bottom: 2px solid #d3d3d2;
 }
 
+.basket__link-text {
+  width: 230px;
+}
+
 .basket__link-img a {
   width: 33px;
   height: 33px;
@@ -1509,7 +1513,7 @@ input[name="percent"]:checked + .filter-richness__radio .filter-richness__radio-
 .filter-filler__checkbox-indicator::before {
   position: absolute;
   content: "";
-  top: -1px;
+  top: -2px;
   left: -8px;
   width: 23px;
   height: 23px;
@@ -1522,7 +1526,7 @@ input[name="filler"]:checked + .filter-filler__checkbox .filter-filler__checkbox
   content: "";
   left: -8px;
   top: -2px;
-  width: 23px;
+  width: 27px;
   height: 23px;
   background-color: inherit;
   background-image: url("../img/checkbox-on.svg");
