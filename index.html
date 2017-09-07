@@ -17,7 +17,9 @@
       <div class="content-wrapper">
         <header class="main-header  container">
           <div class="main-header__flex">
-            <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина &laquo;Глейси&raquo;">
+            <a class="logo__link" href="index.html" title="Магазин &laquo;Глейси&raquo;">
+             <img img src="img/logo.svg" width="154" height="64" alt="Логотип магазина &laquo;Глейси&raquo;">
+            </a>
             <nav class="navigation">
               <ul class="navigation__list">
                 <li class="navigation__item">
@@ -87,7 +89,7 @@
              </div>
 
             <div class="user-block__element">
-              <button class="user-block__link  user-block__link--empty-basket" type="button">Пусто</button>
+              <button class="user-block__link  user-block__link--basket" type="button">Пусто</button>
               <div class="basket">
                 <div class="basket-form">
                   <table class="basket__table" cols="5">
@@ -144,7 +146,7 @@
             </div>
             <section class="slider">
               <div class="slide"  id="slide--1">
-                <h2 class="slide__title">Крембрюле и пломбир с малиновым джемом</h2>
+                <h2 class="slide__title">Крем-брюле и пломбир с малиновым джемом</h2>
                 <a class="slide__btn" href="#" title="Давайте оба">Давайте оба!</a>
               </div>
               <div class="slide"  id="slide--2">
@@ -165,7 +167,7 @@
             <div class="banners">
               <section class="banner  banner--raspberry">
                 <h2 class="banner__title">Малинка даром!</h2>
-                <p class="banner__text">При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                <p class="banner__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                 <a class="banner__btn" href="#" title="Хочу варенье!">Хочу варенье!</a>
               </section>
               <section class="banner  banner--chocolate">
@@ -225,13 +227,12 @@
             </div>
 
             <section class="shop-description">
-              <h2 class="shop-description__title">Магазин Глейси  — это онлайн и оффлайн магазин по  продаже мороженного собственного производства на развес</h2>
+              <h2 class="shop-description__title">Магазин Глейси  — это онлайн и офлайн магазин по  продаже мороженого собственного производства на развес</h2>
               <ul class="shop-description__list">
-                <li class="shop-description__text  shop-description__text--ice-cream">Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-                <li class="shop-description__text  shop-description__text--cow">Закупка ингридиентов  производиться только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-                <li class="shop-description__text  shop-description__text--eco">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-                <li class="shop-description__text  shop-description__text--temperature">Доставка нашего мороженного до заказчиков
-                осуществялется в специальном термопаке, которая не дает мороженному растаять в пути и позволяет ему сохранить свой превосходный вкус.</li>
+                <li class="shop-description__text  shop-description__text--ice-cream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+                <li class="shop-description__text  shop-description__text--cow">Закупка ингридиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+                <li class="shop-description__text  shop-description__text--eco">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+                <li class="shop-description__text  shop-description__text--temperature">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
               </ul>
             </section>
 
@@ -245,7 +246,7 @@
               <article class="newsletter">
                 <div>
                   <h2 class="visually-hidden">Подпишитесь</h2>
-                  <p class="newsletter__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+                  <p class="newsletter__text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                   <form class="newsletter__form" action="#" method="post">
                     <label class="visually-hidden" for="news-email">Электронная почта</label>
                     <input class="newsletter__email" type="email" name="news-email" id="news-email" placeholder="Электронная почта">
@@ -262,9 +263,9 @@
               <h2 class="visually-hidden">Карта</h2>
               <p class="address__text">Адрес главного офиса и офлайн магазина:</p>
               <p class="address__street">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-              <p class="address__inf">Для заказов по телефону:</p>
+              <p class="address__text">Для заказов по телефону:</p>
               <p class="address__phone">8 812 450-25-25</p>
-              <p class="address__inf">(с 10 до 20 ежедневно)</p>
+              <p class="address__text">(с 10 до 20 ежедневно)</p>
               <a class="address__btn" href="#">Форма обратной связи</a>
             </section>
           </div>

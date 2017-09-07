@@ -12,8 +12,10 @@
   <body>
     <header class="main-header container">
       <div class="main-header__flex">
-        <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина &laquo;Глейси&raquo;">
-        <nav class="navigation">
+         <a class="logo__link" href="index.html" title="Магазин &laquo;Глейси&raquo;">
+          <img img src="img/logo.svg" width="154" height="64" alt="Логотип магазина &laquo;Глейси&raquo;">
+         </a>
+         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
               <button class="navigation__btn  navigation__btn--catalog" type="button">Каталог</button>
@@ -82,7 +84,7 @@
         </div>
 
         <div class="user-block__element">
-          <button class="user-block__link  user-block__link--full-basket" type="button">2 товара</button>
+          <button class="user-block__link  user-block__link--basket  user-block__link--full-basket" type="button">2 товара</button>
           <div class="basket">
             <div class="basket-form">
               <table class="basket__table">
@@ -159,12 +161,14 @@
           <div class="filter-wrap">
             <div class="filter__sort">
               <h3 class="filter__title">Сортировка:</h3>
-              <select class="filter-sort__list" name="sort">
-                <option>по популярности</option>
-                <option>сначала недорогие</option>
-                <option>сначала дорогие</option>
-                <option>по жирности</option>
-              </select>
+              <div class="filter__select-wrap">
+                <select class="filter-sort__list" name="sort">
+                  <option>по популярности</option>
+                  <option>сначала недорогие</option>
+                  <option>сначала дорогие</option>
+                  <option>по жирности</option>
+                </select>
+              </div>
             </div>
             <div class="filter-range">
               <h3 class="filter__title">Цена: 100 руб. - 500 руб.</h3>
@@ -378,7 +382,7 @@
               <span class="visually-hidden">Предыдущая страницы</span>
             </a>
           </li>
-          <li><a class="pagination__link" href="#" title="Cтраница 1">1</a></li>
+          <li><a class="pagination__link  pagination__link--current-page" href="#" title="Cтраница 1">1</a></li>
           <li><a class="pagination__link" href="#" title="Cтраница 2">2</a></li>
           <li><a class="pagination__link" href="#" title="Cтраница 3">3</a></li>
           <li><a class="pagination__link" href="#" title="Cтраница 4">4</a></li>
