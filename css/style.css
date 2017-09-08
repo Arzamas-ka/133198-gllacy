@@ -579,7 +579,7 @@ input[name="password"] {
   border: none;
 }
 
-.user-block__link--basket:hover + .basket {
+.user-block__link--full-basket:hover + .basket {
   display: block;
 }
 
@@ -680,12 +680,14 @@ input[name="password"] {
 .user-block__link--full-basket {
   border-radius: 15px;
   background: url("../img/basket-red.svg") no-repeat 16px 6px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #fff;
+  color: #000;
 }
 
-.user-block__element:hover .user-block__link--full-basket {
+.user-block__element:hover .user-block__link--basket {
+  background: url("../img/basket-red.svg") no-repeat 16px 6px;
+  background-color: #fff;
   color: #000;
-  background-color:  #fff;
 }
 
 .user-block__link--full-basket:hover + .basket {
@@ -1389,10 +1391,12 @@ input[name="button"] {
 .feedback__text {
   display: block;
   margin: 0 25px 20px 0;
+  padding: 6px 10px;
   resize: none;
   width: 418px;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 25px;
+  font-weight: 700;
   border-radius: 5px;
   border: 2px solid #d3d3d2;
 }
