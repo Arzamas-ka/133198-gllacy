@@ -292,6 +292,10 @@ input[type="radio"].visually-hidden {
   background-color: #fff;
 }
 
+.menu__link--creamy {
+  background-color: #d07058;
+}
+
 .menu__item:nth-child(1) .menu__link  {
   border-radius: 5px 5px 0 0;
 }
@@ -750,6 +754,14 @@ input[name="password"] {
   cursor: pointer;
 }
 
+.slider-control label:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.slider-control label:active {
+  background-color: #fff;
+}
+
 .slider-control {
   position: absolute;
   bottom: 22px;
@@ -1052,7 +1064,7 @@ input[name="password"] {
   background: #fff url("../img/bg-post.svg") no-repeat;
 }
 
-.newsletter div {
+.newsletter-wrapper {
   position: relative;
   min-height: 210px;
   padding: 28px 20px 24px;
@@ -1071,10 +1083,49 @@ input[name="password"] {
   margin-bottom: 35px;
 }
 
+.newsletter__form .user-block__wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+label[for="news-email"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 11px;
+  left: 18px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999;
+  -webkit-transition: top 0.5s ease;
+  -o-transition: top 0.5s ease;
+  transition: top 0.5s ease;
+}
+
+.newsletter__email.field:focus + label[for="news-email"] {
+  top: -20px;
+  left: 10px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #8fbdec;
+  border-color: #8fbdec;
+}
+
+.field.filled + label[for="news-email"] {
+  top: -20px;
+  left: 10px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999;
+}
+
+
 .newsletter__email {
   width: 345px;
   resize: none;
   font-size: 16px;
+  font-weight: 700;
   line-height: 24px;
   border-radius: 5px;
   padding: 10px;
@@ -1141,6 +1192,10 @@ input[name="button"] {
   margin-bottom: 4px;
 }
 
+.address__text:nth-child(6) {
+  margin-bottom: 26px;
+}
+
 .address__street {
   font-size: 18px;
   line-height: 25px;
@@ -1169,7 +1224,6 @@ input[name="button"] {
   font-weight: inherit;
   -webkit-box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.46);
           box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.46);
-  margin-top: 26px;
 }
 
 .main-footer {
@@ -1309,6 +1363,22 @@ input[name="button"] {
   border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.overlay--show {
+  display: block;
+}
+
 .feedback {
   display: none;
   position: fixed;
@@ -1325,7 +1395,7 @@ input[name="button"] {
           transform: translate(-50%, -50%);
 }
 
-.feedback-show {
+.feedback--show {
   display: block;
   -webkit-animation-name: fly;
           animation-name: fly;
@@ -1401,10 +1471,15 @@ input[name="button"] {
   border: 2px solid #d3d3d2;
 }
 
+.feedback-form .field-label {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .feedback__close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 17px;
   background-color: #f8f7f4;
   border: none;
 }
@@ -1416,6 +1491,7 @@ input[name="button"] {
   font-size: 24px;
   font-weight: 500;
   line-height: 16px;
+  color: #323232;
 }
 
 .field-label {
@@ -1557,9 +1633,10 @@ input[name="button"] {
 
 .filter-sort__list option {
   color: #000;
+  cursor: pointer;
 }
 
- .filter__select-wrap {
+.filter__select-wrap {
    border-radius: 20px;
    overflow: hidden;
    height: 36px;
@@ -1570,6 +1647,7 @@ input[name="button"] {
 .filter-sort__list:hover {
   color: #000;
   background: #fff url("../img/select-arrow-hover.svg") no-repeat 89%;
+  cursor: pointer;
 }
 
 .filter-richness__wrap,
@@ -1601,7 +1679,7 @@ input[name="button"] {
   position: absolute;
   content: '';
   top: -2px;
-  left: -9px;
+  left: -8px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -1611,7 +1689,7 @@ input[name="button"] {
 input[name="percent"]:checked + .filter-richness__radio .filter-richness__radio-indicator:after {
   position: absolute;
   content: "";
-  left: -2px;
+  left: -1px;
   top: 5px;
   width: 9px;
   height: 9px;
@@ -1672,17 +1750,24 @@ input[name="filler"]:checked + .filter-filler__checkbox .filter-filler__checkbox
 .toggle-min,
 .toggle-max {
   position: absolute;
-  top: 9px;
+  top: 8px;
   left: 35px;
   width: 4px;
   height: 4px;
   border: 8px solid white;
   background-color: #ababab;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .toggle-max {
   left: 133px;
+}
+
+.toggle-min:hover,
+.toggle-max:hover {
+  width: 6px;
+  height: 6px;
 }
 
 .filter-richness,

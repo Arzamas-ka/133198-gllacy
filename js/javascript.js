@@ -1,6 +1,7 @@
 const ready = () => {
 	const fieldEls = document.querySelectorAll('.field');
 	const link = document.querySelector('.address__btn');
+	const overlay = document.querySelector('.overlay');
 	const popup = document.querySelector('.feedback');
 	const close = document.querySelector('.feedback__close-btn');
 	const name = document.querySelector('[name=feedback-name]');
@@ -21,7 +22,8 @@ const ready = () => {
 
 	link.addEventListener('click', function (evt) {
 		evt.preventDefault();
-	  popup.classList.add('feedback-show');
+		overlay.classList.add('overlay--show');
+	  popup.classList.add('feedback--show');
 
 		if (storage) {
 			name.classList.add('filled');
@@ -34,7 +36,8 @@ const ready = () => {
 
 	close.addEventListener('click', function (evt) {
 		evt.preventDefault();
-		popup.classList.remove('feedback-show');
+		overlay.classList.remove('overlay--show');
+		popup.classList.remove('feedback--show');
 		popup.classList.remove('feedback-error');
 	});
 
@@ -49,8 +52,8 @@ const ready = () => {
 
 	window.addEventListener('keydown', function (evt) {
 		if (evt.keyCode === 27) {
-			if (popup.classList.contains('feedback-show')) {
-				popup.classList.remove('feedback-show');
+			if (popup.classList.contains('feedback--show')) {
+				popup.classList.remove('feedback--show');
 			}
 		}
 	})
