@@ -774,8 +774,8 @@ input[name="password"] {
 .slider {
   position: relative;
 
-  padding-top: 273px;
-  margin-bottom: 42px;
+  padding-top: 275px;
+  margin-bottom: 41px;
 
   text-align: center;
   color: #ffffff;
@@ -785,7 +785,7 @@ input[name="password"] {
   display: block;
   width: 680px;
   margin: 0 auto;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 
   font-size: 60px;
   line-height: 60px;
@@ -896,7 +896,7 @@ input[name="password"] {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 560px;
-  padding: 17px 18px;
+  padding: 17px 19px;
   border-radius: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1881,7 +1881,6 @@ input[name="button"] {
 .filter-filler__wrap {
   padding: 9px 10px;
   border-radius: 20px;
-  margin-right: 2px;
 
   color: #fff;
 
@@ -1892,7 +1891,7 @@ input[name="button"] {
 .filter-filler__checkbox {
   position: relative;
 
-  padding-left: 25px;
+  padding-left: 26px;
   margin: 0 10px;
 
   font-size: 16px;
@@ -1909,8 +1908,8 @@ input[name="button"] {
 
 .filter-richness__radio::before {
   position: absolute;
-  top: -2px;
-  left: -8px;
+  top: -1px;
+  left: -7px;
   content: '';
 
   width: 15px;
@@ -1923,8 +1922,8 @@ input[name="button"] {
 
 input[name="percent"]:checked + .filter-richness__radio:after {
   position: absolute;
-  left: -1px;
-  top: 5px;
+  top: 6px;
+  left: 0;
   content: "";
 
   width: 9px;
@@ -1950,12 +1949,12 @@ input[name="percent"]:checked + .filter-richness__radio:after {
 
 .filter-filler__checkbox::before {
   position: absolute;
-  top: -2px;
-  left: -8px;
+  top: 1px;
+  left: -6px;
   content: "";
 
-  width: 23px;
-  height: 23px;
+  width: 20px;
+  height: 20px;
 
   background-color: inherit;
   background-image: url("../img/checkbox-off.svg");
@@ -1964,12 +1963,12 @@ input[name="percent"]:checked + .filter-richness__radio:after {
 
 input[name="filler"]:checked + .filter-filler__checkbox:before {
   position: absolute;
-  left: -8px;
-  top: -2px;
+  top: 1px;
+  left: -6px;
   content: "";
 
-  width: 27px;
-  height: 23px;
+  width: 23px;
+  height: 20px;
 
   background-color: inherit;
   background-image: url("../img/checkbox-on.svg");
@@ -2105,7 +2104,7 @@ input[name="filler"]:checked + .filter-filler__checkbox:before {
 
 .pagination__list li {
   position: relative;
-  margin-right: 2px;
+  margin-left: 3px;
 }
 
 .pagination__link {
@@ -2120,6 +2119,10 @@ input[name="filler"]:checked + .filter-filler__checkbox:before {
   text-align: center;
 
   text-decoration: none;
+}
+
+li:last-child .pagination__link {
+  width: 23px;
 }
 
 .pagination-left::before {
