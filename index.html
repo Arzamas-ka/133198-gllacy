@@ -15,122 +15,118 @@
     <input type="radio" name="toggle" id="radio-3">
     <div class="site-wrapper">
       <div class="content-wrapper">
-        <header class="main-header  container">
-          <div class="main-header__flex">
-            <a class="logo__link" href="index.html" title="Магазин Глейси">
-              <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина &laquo;Глейси&raquo;">
-            </a>
-            <nav class="navigation">
-              <ul class="navigation__list">
-                <li class="navigation__item">
-                  <button class="navigation__btn" type="button">Каталог</button>
-                  <ul class="menu">
-                    <li class="menu__item">
-                      <a class="menu__link" href="#">Новинки</a>
-                    </li>
-                    <li class="menu__item">
-                      <a class="menu__link" href="catalog.html">Сливочное</a>
-                    </li>
-                    <li class="menu__item">
-                      <a class="menu__link" href="#">Щербеты</a>
-                    </li>
-                    <li class="menu__item">
-                      <a class="menu__link" href="#">Фруктовый лед</a>
-                    </li>
-                    <li class="menu__item">
-                      <a class="menu__link" href="#">Мелорин</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="navigation__item">
-                  <a class="navigation__link" href="#" title="Доставка и оплата">Доставка и оплата</a>
-                </li>
-                <li class="navigation__item">
-                  <a class="navigation__link" href="#" title="О Компании">О Компании</a>
-                </li>
-              </ul>
-            </nav>
+        <header class="main-header  container  main-header__flex">
+          <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <button class="navigation__btn" type="button">Каталог</button>
+                <ul class="menu">
+                  <li class="menu__item" tabindex="0">
+                    <a class="menu__link" href="#" title="Новинки">Новинки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="catalog.html" title="Сливочное"   tabindex="0">Сливочное</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#" title="Щербеты">Щербеты</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#" title="Фруктовый лед">Фруктовый лед</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#" title="Мелорин">Мелорин</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#" title="Доставка и оплата">Доставка и оплата</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#" title="О Компании">О Компании</a>
+              </li>
+            </ul>
+          </nav>
 
-            <div class="user-block">
-              <div class="user-block__element">
-                <button class="user-block__link  user-block__link--search" type="button">
-                  <span class="visually-hidden">Поиск</span>
-                </button>
-                <div class="user-block__search">
-                  <form class="user-block__search-form" action="#" method="get">
-                    <div class="user-block__wrapper">
-                      <input class="field" type="text" name="search" id="search">
-                      <label class="field-label" for="search">Что ищем?</label>
-                      <input class="visually-hidden" type="submit" name="button-hidden" value="Отправить">
-                    </div>
-                  </form>
-                </div>
-              </div>
-
-              <div class="user-block__element">
-                <button class="user-block__link  user-block__link--entry" type="button">Вход</button>
-                <div class="user-block__entry">
-                  <form class="user-block__entry-form" action="#" method="post">
-                    <div class="user-block__wrapper">
-                      <input class="field" type="email" name="email" id="email">
-                      <label class="field-label" for="email">Электронная почта</label>
-                    </div>
-                    <div class="user-block__wrapper">
-                      <input class="field" type="password" name="password" id="password">
-                      <label class="field-label" for="password">Пароль</label>
-                    </div>
-                    <input class="entry-btn" type="submit" name="submit" value="Войти">
-                    <div class="entry-link">
-                      <a class="password-link" href="#" title="Забыли пароль?">Забыли пароль?</a>
-                      <a class="signin-link" href="#" title="Новая регистрация">Новая регистрация</a>
-                    </div>
-                  </form>
-                </div>
-              </div>
-
-              <div class="user-block__element">
-                <button class="user-block__link  user-block__link--basket" type="button">Пусто</button>
-                <div class="basket">
-                  <div class="basket-form">
-                    <table class="basket__table">
-                      <tr>
-                        <td>
-                          <button class="basket__close-btn" type="button">
-                            <span class="visually-hidden">Закрыть</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
-                          </button>
-                        </td>
-                        <td class="basket__link-img">
-                          <a href="#" title="Пломбир с апельсиновым джемом">
-                            <img class="basket__img" src="img/basket-img--1.png" width="33" height="33" alt="">
-                          </a>
-                        </td>
-                        <td class="basket__link-text">
-                          <a class="basket__text" href="#">Пломбир с апельсиновым джемом</a>
-                        </td>
-                        <td>1,5 кг х <span>200 руб.</span></td>
-                        <td>300 руб.</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <button class="basket__close-btn" type="button">
-                            <span class="visually-hidden">Закрыть</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
-                          </button>
-                        </td>
-                        <td class="basket__link-img">
-                          <a href="#" title="Клубничный пломбир с присыпкой  из белого шоколада">
-                            <img class="basket__img" src="img/basket-img--2.png" width="33" height="33" alt="">
-                          </a>
-                        </td>
-                        <td><a class="basket__text" href="#">Клубничный пломбир с присыпкой  из белого шоколада</a></td>
-                        <td>1,5 кг х <span>300 руб.</span></td>
-                        <td>450 руб.</td>
-                      </tr>
-                    </table>
-                    <span class="basket__total">Итого: 750 руб.</span>
-                    <a class="basket__btn" href="#" title="Оформить заказ">Оформить заказ</a>
+          <div class="user-block">
+            <div class="user-block__element">
+              <button class="user-block__link  user-block__link--search" type="button">
+                <span class="visually-hidden">Поиск</span>
+              </button>
+              <div class="user-block__search">
+                <form class="user-block__search-form" action="#" method="get">
+                  <div class="user-block__wrapper">
+                    <input class="field" type="text" name="search" id="search">
+                    <label class="field-label" for="search">Что ищем?</label>
+                    <input class="visually-hidden" type="submit" name="button-hidden" value="Отправить">
                   </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="user-block__element">
+              <button class="user-block__link  user-block__link--entry" type="button">Вход</button>
+              <div class="user-block__entry">
+                <form class="user-block__entry-form" action="#" method="post">
+                  <div class="user-block__wrapper">
+                    <input class="field" type="email" name="email" id="email">
+                    <label class="field-label" for="email">Электронная почта</label>
+                  </div>
+                  <div class="user-block__wrapper">
+                    <input class="field" type="password" name="password" id="password">
+                    <label class="field-label" for="password">Пароль</label>
+                  </div>
+                  <input class="entry-btn" type="submit" name="submit" value="Войти">
+                  <div class="entry-link">
+                    <a class="password-link" href="#" title="Забыли пароль?">Забыли пароль?</a>
+                    <a class="signin-link" href="#" title="Новая регистрация">Новая регистрация</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="user-block__element">
+              <button class="user-block__link  user-block__link--basket" type="button">Пусто</button>
+              <div class="basket">
+                <div class="basket-form">
+                  <table class="basket__table">
+                    <tr>
+                      <td>
+                        <button class="basket__close-btn" type="button">
+                          <span class="visually-hidden">Закрыть</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+                        </button>
+                      </td>
+                      <td class="basket__link-img">
+                        <a href="#" title="Пломбир с апельсиновым джемом">
+                          <img class="basket__img" src="img/basket-img--1.png" width="33" height="33" alt="">
+                        </a>
+                      </td>
+                      <td class="basket__link-text">
+                        <a class="basket__text" href="#">Пломбир с апельсиновым джемом</a>
+                      </td>
+                      <td>1,5 кг х <span>200 руб.</span></td>
+                      <td>300 руб.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <button class="basket__close-btn" type="button">
+                          <span class="visually-hidden">Закрыть</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+                        </button>
+                      </td>
+                      <td class="basket__link-img">
+                        <a href="#" title="Клубничный пломбир с присыпкой  из белого шоколада">
+                          <img class="basket__img" src="img/basket-img--2.png" width="33" height="33" alt="">
+                        </a>
+                      </td>
+                      <td><a class="basket__text" href="#">Клубничный пломбир с присыпкой  из белого шоколада</a></td>
+                      <td>1,5 кг х <span>300 руб.</span></td>
+                      <td>450 руб.</td>
+                    </tr>
+                  </table>
+                  <span class="basket__total">Итого: 750 руб.</span>
+                  <a class="basket__btn" href="#" title="Оформить заказ">Оформить заказ</a>
                 </div>
               </div>
             </div>
@@ -185,9 +181,9 @@
                   <div class="good__hover">
                     <div class="good-hit"></div>
                     <img class="good__img" src="img/bg-hit--1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                    <p class="good__price">310₽/<span>кг</span></p>
+                    <p class="good__price">310<span>/кг</span></p>
                     <h3 class="good__title">
-                      <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                      <a href="#" title="Сливочное с апельсиновым джемом и цитрусовой стружкой">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                     </h3>
                     <a class="good__btn" href="#" title="Быстрый просмотр">Быстрый просмотр</a>
                   </div>
@@ -196,9 +192,9 @@
                   <div class="good__hover">
                     <div class="good-hit"></div>
                     <img class="good__img" src="img/bg-hit--2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-                    <p class="good__price">380₽/<span>кг</span></p>
+                    <p class="good__price">380<span>/кг</span></p>
                     <h3 class="good__title">
-                      <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+                      <a href="#" title="Сливочно-кофейное с кусочками шоколада">Сливочно-кофейное с кусочками шоколада</a>
                     </h3>
                     <a class="good__btn" href="#" title="Быстрый просмотр">Быстрый просмотр</a>
                   </div>
@@ -207,9 +203,9 @@
                   <div class="good__hover">
                     <div class="good-hit"></div>
                     <img class="good__img" src="img/bg-hit--3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                    <p class="good__price">355₽/<span>кг</span></p>
+                    <p class="good__price">355<span> /кг</span></p>
                     <h3 class="good__title">
-                      <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                      <a href="#" title="Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное с присыпкой из белого шоколада</a>
                     </h3>
                     <a class="good__btn" href="#" title="Быстрый просмотр">Быстрый просмотр</a>
                   </div>
@@ -218,9 +214,9 @@
                   <div class="good__hover">
                     <div class="good-hit"></div>
                     <img class="good__img" src="img/bg-hit--4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-                    <p class="good__price">415₽/<span>кг</span></p>
+                    <p class="good__price">415<span> /кг</span></p>
                     <h3 class="good__title">
-                      <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                      <a href="#" title="Сливочное крем-брюле с карамельной подливкой">Сливочное крем-брюле с карамельной подливкой</a>
                     </h3>
                     <a class="good__btn" href="#" title="Быстрый просмотр">Быстрый просмотр</a>
                   </div>
@@ -270,7 +266,7 @@
               <p class="address__text">Для заказов по телефону:</p>
               <p class="address__phone">8 812 450-25-25</p>
               <p class="address__text">(с 10 до 20 ежедневно)</p>
-              <a class="address__btn" href="#">Форма обратной связи</a>
+              <a class="address__btn" href="form-feedback.html" title="Форма обратной связи">Форма обратной связи</a>
             </section>
           </div>
         </main>
@@ -317,7 +313,7 @@
             </ul>
 
             <div class="footer-author">
-              <img src="img/logo-htmlacademy.svg" width="110" height="40" alt="Логин HTML Academy">
+              <img src="img/logo-htmlacademy.svg" width="110" height="40" alt="Логотип HTML Academy">
               <p class="footer-author__text">Сделано в
                 <a class="footer-author__link" href="https://htmlacademy.ru/" target="_blank" title="HTML Academy">HTML Academy</a>
               © 2016</p>

@@ -53,6 +53,7 @@ const ready = () => {
 	window.addEventListener('keydown', function (evt) {
 		if (evt.keyCode === 27) {
 			if (popup.classList.contains('feedback--show')) {
+				overlay.classList.remove('overlay--show');
 				popup.classList.remove('feedback--show');
 			}
 		}
