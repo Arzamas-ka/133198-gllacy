@@ -268,8 +268,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 32px;
   left: -8px;
-  z-index: 1;
   content: '';
+  z-index: 5;
 
   display: none;
   padding: 0;
@@ -313,8 +313,7 @@ input[type="radio"].visually-hidden {
   border-radius:  0 0 5px 5px;
 }
 
-.menu__link:hover,
-.menu__link:focus {
+.menu__link:hover {
   background-color: #fbded7;
 }
 
@@ -367,10 +366,6 @@ input[type="radio"].visually-hidden {
 .menu:hover,
 .menu:focus {
   display: block;
-}
-
-.menu--focus {
-  visibility: visible;
 }
 
 .user-block {
@@ -436,6 +431,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 33px;
   left: -307px;
+  z-index: 2;
 
   display: none;
   width: 339px;
@@ -613,7 +609,7 @@ input[name="password"] {
 .basket {
   position: absolute;
   top: 33px;
-  left: -420px;
+  left: -423px;
   z-index: 4;
 
   display: none;
@@ -624,7 +620,7 @@ input[name="password"] {
 }
 
 .basket-form {
-  padding: 20px;
+  padding: 10px 15px;
   border-radius: 5px;
 
   color: #000;
@@ -635,7 +631,9 @@ input[name="password"] {
 }
 
 .basket__close-btn {
+  padding: 0;
   border: none;
+  margin-right: 5px;
 
   background-color: #f8f7f4;
 
@@ -658,13 +656,21 @@ input[name="password"] {
   border-bottom: 2px solid #d3d3d2;
 
   font-size: 13px;
-  line-height: 19px;
+  line-height: 16px;
   font-weight: 400;
   color: #323232;
 }
 
+.basket__table tr {
+  height: 48px;
+}
+
+td {
+  vertical-align: middle;
+}
+
 .basket__link-text {
-  width: 230px;
+  width: 245px;
 }
 
 .basket__link-img a {
@@ -682,15 +688,17 @@ input[name="password"] {
 
 .basket__total {
   display: block;
-  margin: 15px 0 0 378px;
+  margin: 15px 0 0 402px;
+
+  font-size: 15px;
 }
 
 .basket__btn {
   display: inline-block;
-  padding: 10px 23px;
+  padding: 10px 15px;
   border: none;
   border-radius: 25px;
-  margin: 15px 0 0 307px;
+  margin: 10px 0 10px 337px;
 
   font-size: 18px;
   line-height: 24px;
@@ -960,7 +968,7 @@ input[name="password"] {
 .good {
   position: relative;
   width: 293px;
-  height: 402px;
+  height: 100%;
   margin-bottom: -40px;
 
   text-align: center;
@@ -972,6 +980,42 @@ input[name="password"] {
 
 .good:nth-child(4n+1) {
   margin-left: -13px;
+}
+
+.good__btn  {
+  display: inline-block;
+  opacity: 0;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: inherit;
+  color: #fff;
+
+  background: #ef6240;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.46);
+          box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.46);
+}
+
+.good:hover .good__btn,
+.good:focus .good__btn {
+  opacity: 1;
+}
+
+.good:hover,
+.good:focus {
+  display: block;
+  height: 105%;
+  border-radius: 5px;
+  z-index: 5;
+
+
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .good__img {
@@ -1046,50 +1090,8 @@ input[name="password"] {
  color: inherit;
  }
 
-.good__btn  {
-  position: absolute;
-  top: 340px;
-  left: 43px;
-
-  display: none;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 30px;
-
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: inherit;
-  color: #fff;
-
-  background: #ef6240;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.46);
-          box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.46);
-}
-
-.good__hover:hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-
-  display: block;
-  width: 100%;
-  height: 406px;
-  border-radius: 5px;
-
-
-  background-color: rgba(255, 255, 255, 0.4);
-  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-          box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-}
-
-.good__hover:hover .good__btn {
-  display: block;
-}
-
 .shop-description {
-  height: 306px;
-  padding: 24px 20px;
+  padding: 23px 20px;
   border-radius: 15px;
   margin-bottom: 40px;
   -webkit-box-sizing: border-box;
@@ -1815,7 +1817,7 @@ input[name="button"] {
 }
 
 .filters {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .filter-wrap {
